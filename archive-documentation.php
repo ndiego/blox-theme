@@ -10,7 +10,7 @@ function blox_do_documentation_archive_title() {
 	<h1 class="entry-title" itemprop="headline">
 		<?php _e( 'Documentation', 'blox-theme' ); ?>
 	</h1>
-	<?php get_search_form(); 
+	<?php get_search_form();
 }
 
 // Remove the archive loop...
@@ -21,18 +21,18 @@ add_action( 'genesis_before_loop', 'blox_print_categories', 1 );
 function blox_print_categories() {
 
 	$args = array(
-		'orderby'           => 'term_group', 
+		'orderby'           => 'term_group',
 		'order'             => 'ASC',
-		'hide_empty'        => true, 
-		'fields'            => 'all', 
-		'hierarchical'      => true, 
-	); 
+		'hide_empty'        => true,
+		'fields'            => 'all',
+		'hierarchical'      => true,
+	);
 
 	$categories = get_terms( 'documentation-type', $args );
-	
+
 	if ( ! empty( $categories ) ) {
 		foreach( $categories as $category ) {
-		
+
 			$args = array(
 				'post_type' => 'documentation',
 				'tax_query' => array(
@@ -42,13 +42,13 @@ function blox_print_categories() {
 						'terms'    => $category->slug,
 					),
 				),
-				'orderby'        => 'menu_order', 
+				'orderby'        => 'menu_order',
 				'order'          => 'ASC',
 				'posts_per_page' => -1
 			);
-		
+
 			$docs = new WP_Query( $args );
-		
+
 			if ( ! empty ( $docs ) ) {
 				?>
 				<div id="category_<?php echo $category->slug; ?>" class="documentation-wrapper">

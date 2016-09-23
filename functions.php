@@ -4,7 +4,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 
 // Setup Theme
 //include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
-//include_once( get_stylesheet_directory() . '/lib/login.php' );
+include_once( get_stylesheet_directory() . '/lib/login.php' );
 include_once( get_stylesheet_directory() . '/lib/documentation.php' );
 //include_once( get_stylesheet_directory() . '/lib/shortcodes.php' );
 
@@ -31,7 +31,7 @@ function blox_load_scripts() {
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700', array(), CHILD_THEME_VERSION );
 
 	wp_enqueue_style( 'dashicons' );
-	
+
 	wp_enqueue_script( 'global-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0', true );
 }
 
@@ -40,7 +40,7 @@ function blox_load_scripts() {
 add_image_size( 'featured-page', 960, 700, TRUE );
 add_image_size( 'featured-post', 400, 300, TRUE );
 
-// Add theme support for page excerpts 
+// Add theme support for page excerpts
 add_post_type_support( 'page', 'excerpt' );
 
 // Add support for structural wraps
@@ -109,8 +109,8 @@ function blox_page_modifications() {
         add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
         add_action( 'genesis_after_header', 'blox_do_post_title', 2 );
         add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-        add_action( 'genesis_entry_header', 'blox_do_post_thumbnail' );  
-        remove_action( 'genesis_entry_footer', 'genesis_post_meta' );  
+        add_action( 'genesis_entry_header', 'blox_do_post_thumbnail' );
+        remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
     } elseif ( is_singular( 'download' ) ) {
     	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
@@ -140,9 +140,9 @@ function blox_do_page_title() {
 	if ( 0 === mb_strlen( $title ) ) {
 		return;
 	}
-	
+
 	echo '<h1 class="entry-title" itemprop="headline">' . $title . '</h1>';
-	
+
 	if ( ! empty( $subtitle ) ) {
 		echo '<p class="entry-subtitle">' . $subtitle . '</h1>';
 	}
@@ -160,14 +160,14 @@ function blox_do_blog_title() {
 function blox_do_post_title() {
 
 	$categories = get_the_terms( get_the_ID(), 'category' );
-		
-	foreach ( $categories as $category ) { 
-		$category_array[] = '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>'; 
+
+	foreach ( $categories as $category ) {
+		$category_array[] = '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
 	}
-	
+
 	$author_id = get_queried_object()->post_author;
 	$author_archive_link = '<a href="' . get_author_posts_url ( $author_id ) . '">' . get_the_author_meta( 'display_name', $author_id ) . '</a>';
-	
+
 	?>
 	<p class="title-categories"><?php echo implode( $category_array, ', ' );?></p>
 	<h1 class="entry-title" itemprop="headline"><?php echo get_the_title(); ?></h1>
@@ -229,17 +229,17 @@ function blox_single_related_posts() {
 		$current_id = get_the_ID();
 
 		$categories = get_the_terms( $current_id, 'category' );
-		foreach ( $categories as $category ) { 
-			$category_array[] = $category->term_id; 
+		foreach ( $categories as $category ) {
+			$category_array[] = $category->term_id;
 		}
-	
+
 		$related_query = new WP_Query( array(
 			'showposts'    => 2,
 			'orderby' 	   => 'rand',
-			'cat' 		   => implode( $category_array, ',' ), 
+			'cat' 		   => implode( $category_array, ',' ),
 			'post__not_in' => array( $current_id )
-		) ); 
-		
+		) );
+
 		if ( $related_query->have_posts() ) {
 			?>
 			<section class="latest-posts columns columns-2 grid">
@@ -368,7 +368,7 @@ function blox_redirect_login_to_members() {
 
 	if ( is_page('login') && is_user_logged_in() && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
 
-		wp_redirect( '/your-account/', 301 ); 
+		wp_redirect( '/your-account/', 301 );
   		exit;
     }
 }
@@ -379,7 +379,7 @@ function blox_redirect_members_to_login() {
 
 	if ( is_page('your-account') && ! is_user_logged_in() && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
 
-		wp_redirect( '/login/', 301 ); 
+		wp_redirect( '/login/', 301 );
   		exit;
     }
 }
@@ -438,8 +438,8 @@ function blox_empty_checkout_cart() {
 		<h2>Oops... There's nothing in your cart!</h2>
 		<p>Head over to the pricing page to learn about the different licensing options for Blox.</p>
 		<a class="button" href="/pricing">View Pricing</a>
-	
+
 		<p class="example-block warning" style="margin-top:50px;">Did you actually add a Blox license to your cart and it isn't showing up here? Try clearing your browser cache and then add a license to your cart again.</p>
 	</div>
-	<?php 
+	<?php
 }

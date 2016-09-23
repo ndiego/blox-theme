@@ -4,12 +4,12 @@
 	Description: The base theme for bloxwp.com
 	Author: Nick Diego
 	Author URI: http://www.nickdiego.com/
-	
+
 	Version: 1.0
-  
+
 	Template: genesis
 	Template Version: 2.1
- 
+
 	License: GPL-2.0+
 	License URI: http://www.opensource.org/licenses/gpl-license.php
 */
@@ -18,29 +18,29 @@
 /**
  * @license
  * MyFonts Webfont Build ID 3281390, 2016-09-11T16:46:58-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: AvenirLTStd-Heavy by Linotype
  * URL: http://www.myfonts.com/fonts/linotype/avenir/85-heavy/
  * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
- * 
+ *
  * Webfont: AvenirLTStd-Medium by Linotype
  * URL: http://www.myfonts.com/fonts/linotype/avenir/65-medium/
  * Copyright: Copyright &#x00A9; 1981 - 2006 Linotype GmbH, www.linotype.com. All rights reserved. Copyright &#x00A9; 1989 - 2002 Adobe Systems Incorporated.  All Rights Reserved.
- * 
+ *
  * Webfont: AvenirLTStd-Book by Linotype
  * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book/
  * Copyright: Copyright &#x00A9; 1989, 1995, 2002 Adobe Systems Incorporated.  All Rights Reserved. &#x00A9; 1981, 1995, 2002 Heidelberger Druckmaschinen AG. All rights reserved.
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3281390
  * Licensed pageviews: 250,000
- * 
+ *
  * © 2016 MyFonts Inc
 */
 
@@ -48,10 +48,10 @@
 /* @import must be at top of file, otherwise CSS will not work */
 /*@import url("//hello.myfonts.net/count/3211ee");*/
 
-@font-face {font-family: 'AvenirLTStd-Heavy';src: url('fonts/webfonts/3211EE_0_0.eot');src: url('fonts/webfonts/3211EE_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/webfonts/3211EE_0_0.woff2') format('woff2'),url('webfonts/3211EE_0_0.woff') format('woff'),url('fonts/webfonts/3211EE_0_0.ttf') format('truetype');} 
+@font-face {font-family: 'AvenirLTStd-Heavy';src: url('fonts/webfonts/3211EE_0_0.eot');src: url('fonts/webfonts/3211EE_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/webfonts/3211EE_0_0.woff2') format('woff2'),url('webfonts/3211EE_0_0.woff') format('woff'),url('fonts/webfonts/3211EE_0_0.ttf') format('truetype');}
 @font-face {font-family: 'AvenirLTStd-Medium';src: url('fonts/webfonts/3211EE_1_0.eot');src: url('fonts/webfonts/3211EE_1_0.eot?#iefix') format('embedded-opentype'),url('fonts/webfonts/3211EE_1_0.woff2') format('woff2'),url('webfonts/3211EE_1_0.woff') format('woff'),url('fonts/webfonts/3211EE_1_0.ttf') format('truetype');}
 @font-face {font-family: 'AvenirLTStd-Book';src: url('fonts/webfonts/3211EE_2_0.eot');src: url('fonts/webfonts/3211EE_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/webfonts/3211EE_2_0.woff2') format('woff2'),url('webfonts/3211EE_2_0.woff') format('woff'),url('fonts/webfonts/3211EE_2_0.ttf') format('truetype');}
- 
+
 /*
 HTML5 Reset
 ---------------------------------------------------------------------------------------------------- */
@@ -181,8 +181,8 @@ a:hover {
 	color: #162938;
 }
 
-a, 
-a:active, 
+a,
+a:active,
 a:focus {
 	cursor: pointer;
 	outline: none;
@@ -465,56 +465,6 @@ input:hover[type="submit"],
 	background-color: #162938;
 }
 
-.blox-home .color-section button,
-.blox-home .color-section input[type="button"],
-.blox-home .color-section input[type="reset"],
-.blox-home .color-section input[type="submit"],
-.blox-home .color-section .button,
-.blox-home .color-section .more-link,
-.site-header .widget-area button,
-.site-header .widget-area input[type="button"],
-.site-header .widget-area input[type="reset"],
-.site-header .widget-area input[type="submit"],
-.site-header .widget-area .button {
-	background-color: #fff;
-	color: #162938;
-}
-
-.blox-home .color-section button:hover,
-.blox-home .color-section input:hover[type="button"],
-.blox-home .color-section input:hover[type="reset"],
-.blox-home .color-section input:hover[type="submit"],
-.blox-home .color-section .button:hover,
-.blox-home .home-widgets .color-section .more-link:hover,
-.site-header .widget-area button:hover,
-.site-header .widget-area input:hover[type="button"],
-.site-header .widget-area input:hover[type="reset"],
-.site-header .widget-area input:hover[type="submit"],
-.site-header .widget-area .button:hover {
-	background-color: #162938;
-	color: #fff;
-}
-
-.blox-home .dark-section button,
-.blox-home .dark-section input[type="button"],
-.blox-home .dark-section input[type="reset"],
-.blox-home .dark-section input[type="submit"],
-.blox-home .dark-section .button,
-.blox-home .dark-section .more-link {
-	background-color: #484a4e;
-	color: #fff;
-}
-
-.blox-home .dark-section button:hover,
-.blox-home .dark-section input:hover[type="button"],
-.blox-home .dark-section input:hover[type="reset"],
-.blox-home .dark-section input:hover[type="submit"],
-.blox-home .dark-section .button:hover {
-	background-color: #eee;
-	color: #162938;
-}
-
-.blox-home .dark-section .more-link:hover,
 .content .button:hover,
 .sidebar .button:hover {
 	color: #fff;
@@ -1077,14 +1027,14 @@ Site Header
 
 .nav-primary .wrap {
 	padding: 0;
-}	
+}
 
 .nav-primary .menu-item {
 	display: inline-block;
 }
 
 .nav-primary a {
-	color: #162938;	
+	color: #162938;
 	display: block;
 	font-family: 'AvenirLTStd-Medium', sans-serif;
 	font-size: 16px;
@@ -1110,10 +1060,10 @@ Site Header
 	color: #fff;
 	padding: 15px 20px 13px;
 	text-align: center; /* A little redundant but corrects on mobile */
-}	
+}
 
 .nav-primary .get-blox a:hover {
-	background-color: #162938;	
+	background-color: #162938;
 }
 
 .nav-primary .menu-item-has-children a:after {
@@ -1270,7 +1220,7 @@ Content Area
 .home-widgets p {
 	color: #44535E;
 	/*letter-spacing: 1px;*/
-}	
+}
 
 
 
@@ -1414,6 +1364,10 @@ Content Area
     padding: 20px;
 }
 
+.home-widgets-3 .action a.button:hover {
+	color: #162938;
+	background-color: #fff;
+}
 
 
 
@@ -1428,7 +1382,8 @@ Content Area
 }
 
 .home-widgets-4 .features-container {
-	margin: 80px 0 20px;
+	margin: 80px auto 20px;
+	max-width: 850px;
 }
 
 .home-widgets-4 .features-links {
@@ -1437,8 +1392,8 @@ Content Area
 }
 
 .home-widgets-4 .features-links .button {
-	font-size: 22px;
-	padding: 20px;
+	font-size: 20px;
+	padding: 20px 30px;
 }
 
 .home-widgets-4 .features-links .text {
@@ -1446,11 +1401,18 @@ Content Area
 }
 
 .home-widgets-4 .features-links .text .dashicons {
-	line-height: 3.2;
+	line-height: 3.1;
 }
 
 .home-widgets-5 {
-	background: #f5f5f5;
+	background: #F0F8FF;
+	padding: 140px 0;
+}
+
+
+.home-widgets-6 {
+	background-color: #3DAEF1;
+	padding: 80px 0;
 }
 
 .home-widgets .widget.featuredpost,
@@ -1502,7 +1464,7 @@ Content Area
     -webkit-justify-content: space-between;
     flex-flow: row wrap;
     justify-content: space-between;
-	
+
 	margin: 0 auto;
 	max-width: 1200px;
 	padding: 100px 0 100px;
@@ -1616,12 +1578,12 @@ Content Area
 
 /* Blog Page
 --------------------------------------------- */
-.blog-thumbnail {	
+.blog-thumbnail {
 	display: block;
 	position: relative;
 	width: 100%;
 	height: 250px;
-	
+
 	background-repeat: no-repeat;
 	background-position: center center;
 	-webkit-background-size: cover;
@@ -1872,7 +1834,7 @@ p.entry-meta {
 .comment-list li {
     padding: 40px 0;
     border-bottom: 1px solid #dbdbdb;
-}    
+}
 
 .comment-list li li {
 	margin-right: -40px;
@@ -2090,7 +2052,7 @@ Templates
 /* Documentation Pages
 --------------------------------------------- */
 
-/* Documentation Single Pages 
+/* Documentation Single Pages
 .documentation-home {
 	border-top: 3px solid #dbdbdb;
 	margin-top: 30px;
@@ -2133,7 +2095,7 @@ background-color: #F0F8FF;
 	margin: 0
 }
 .search-results-wrapper {
-	
+
 	max-width: 800px;
     margin: 0 auto 80px;
 	padding: 60px 0 80px;
@@ -2337,7 +2299,7 @@ background-color: #F0F8FF;
 }
 
 .features-container .feature p {
-	font-size: 18px;
+	font-size: 17px;
 }
 
 .features-container .feature .dashicons {
@@ -2347,6 +2309,10 @@ background-color: #F0F8FF;
     display: inline-block;
     margin-right: 20px;
 
+}
+
+.features-container .feature:nth-child(odd) {
+	clear: both;
 }
 
 .features-container .feature:nth-child(even) {
@@ -2475,7 +2441,7 @@ Useful Classes
 
 
 .features {
-	
+
 
 }
 
@@ -2591,8 +2557,8 @@ div.wpcf7-mail-sent-ok {
 }
 #slb_viewer_wrap .slb_theme_slb_default .slb_data_title {
 	font-family: 'AvenirLTStd-Heavy', sans-serif !important;
-	font-size: 18px !important; 
-	margin-top: 10px !important; 
+	font-size: 18px !important;
+	margin-top: 10px !important;
  }
 #slb_viewer_wrap .slb_theme_slb_default .slb_data_desc {
     	display: block;
@@ -2753,7 +2719,7 @@ div.wpcf7-mail-sent-ok {
 	margin: 0 0 10px;
 }
 
-#edd_terms_agreement { 
+#edd_terms_agreement {
 	margin-bottom: 20px !important;
 }
 #edd_agree_to_terms {
@@ -2923,7 +2889,7 @@ ul.edd_bundled_product_files {
 	.wrap {
 		max-width: 960px;
 	}
-	
+
 	.home-widgets .wrap {
 		max-width: 1000px;
 	}
@@ -2938,7 +2904,7 @@ ul.edd_bundled_product_files {
     }
 
 	.home-widgets .featuredpage .widget-wrap {
-		padding-top: 0;	
+		padding-top: 0;
 		padding-left: 6%;
 		padding-right: 6%;
 	}
@@ -2960,8 +2926,8 @@ ul.edd_bundled_product_files {
 	.home-widgets-1 h1 {
 		font-size: 50px;
 	}
-	
-	
+
+
 	.home-widgets-3 .text,
 	.home-widgets-3 .action {
 		float: none;
@@ -2972,8 +2938,8 @@ ul.edd_bundled_product_files {
 		margin-top: 30px;
 		width: 190px;
 	}
-	
-	
+
+
 	.home-widgets-2 .steps-text,
 	.home-widgets-2 .steps-image,
 	.home-widgets-2 .steps-image.offset {
@@ -2981,12 +2947,12 @@ ul.edd_bundled_product_files {
 		width: 100%;
 		height: auto;
 	}
-	
+
 	.home-widgets-2 .steps-image img {
 		width: 100%
 	}
-	
-	
+
+
 	/* Containers */
 	.wrap,
 	.site-header .wrap {
@@ -2995,14 +2961,14 @@ ul.edd_bundled_product_files {
         padding-right: 5%;
 	}
 
-	
+
 	/* Navigation */
 	.nav-primary {
 		float: none;
 		max-width: 300px;
 		margin: 0 auto;
 	}
-	
+
 	.nav-primary li {
 		display: block;
 		width: 100%;
@@ -3011,12 +2977,12 @@ ul.edd_bundled_product_files {
 	.nav-primary a {
 		font-size: 20px;
 	}
-	
+
 	.nav-primary.responsive-menu {
 		display: none;
 		padding-top: 60px;
 	}
-	
+
 	#responsive-menu-icon {
 		display: block;
 	}
@@ -3024,7 +2990,7 @@ ul.edd_bundled_product_files {
 	.nav-show #responsive-menu-icon:before {
 		content: "\f335";
 	}
-	
+
 	.nav-show .site-header {
 		background-color: #fff;
 		top: 0;
@@ -3038,12 +3004,12 @@ ul.edd_bundled_product_files {
 	.nav-show .responsive-menu {
 		display: block;
 	}
-	
+
 	body.nav-show {
 		height: 100%;
 		overflow: hidden; /* Browser jumps to top of page, but shouldn't be an issue */
 	}
-	
+
 	.nav-primary .sub-menu {
 		left: 0;
 		opacity: 1;
@@ -3052,11 +3018,11 @@ ul.edd_bundled_product_files {
 		display: none;
 		width: 100%;
 	}
-	
+
 	.nav-primary .sub-menu li {
 		margin-bottom: 0;
 	}
-	
+
 	.nav-primary .sub-menu a {
     	background-color: #fff;
     	color: #162938;
@@ -3066,35 +3032,35 @@ ul.edd_bundled_product_files {
     	position: relative;
     	width: 100%;
 	}
-	
+
 	.nav-primary .sub-menu:before {
 		content: none;
 	}
-	
+
 	.nav-primary .sub-menu a:hover {
 		background-color: #fff;
 		color: #3daef1;
 	}
-	
-	
+
+
 	/* Titles */
 	.page-title,
 	.error404 .page-title {
 		padding: 100px 0 40px;
 	}
-	
+
 	.home-widgets .featuredpage .entry-title,
 	.page-title .archive-title,
 	.page-title .entry-title {
 		font-size: 36px;
 	}
-	
+
 	.archive-description p,
 	.entry-subtitle {
 		font-size: 18px;
 	}
-	
-	
+
+
 	/* Footer */
 	.footer-widgets {
 		padding-top: 80px;
@@ -3106,7 +3072,7 @@ ul.edd_bundled_product_files {
 		margin-bottom: 60px;
 		width: 33.16293833%;
 	}
-	
+
 	.footer-widgets-4 {
 		width: 100%;
 	}
@@ -3117,12 +3083,12 @@ ul.edd_bundled_product_files {
 	body {
 		font-size: 16px;
 	}
-	
+
 	.admin-bar .site-header {
 		top: 46px;
 		z-index: 499;
 	}
-	
+
 	/* Homepage */
 	.home-widgets .featuredpost .entry {
 		margin: 0;
@@ -3138,10 +3104,10 @@ ul.edd_bundled_product_files {
 		padding: 100px 0 70px;
 	}
 	.home-widgets-1 h2 {
-		font-size: 34px; 
+		font-size: 34px;
 	}
 	.home-widgets-1 h3 {
-		font-size: 18px; 
+		font-size: 18px;
 	}
 	.home-featured .wrap {
 	   margin-top: -60px;
@@ -3155,7 +3121,7 @@ ul.edd_bundled_product_files {
 	.home-widgets-3 .featuredpost .entry:last-child {
 		margin-bottom: 0;
 	}
-	
+
 	.arrow {
 		bottom: 30px
 	}
@@ -3164,9 +3130,9 @@ ul.edd_bundled_product_files {
 		height: 30px;
 		width: 30px;
 	}
-	
-	
-	
+
+
+
 	.site-inner .wrap {
 		padding-left: 0;
         padding-right: 0;
@@ -3174,7 +3140,7 @@ ul.edd_bundled_product_files {
 	.single-post article .wp-post-image {
 		display: none;
 	}
-	
+
 	.full-width-content .content,
 	.content,
 	.sidebar {
@@ -3184,14 +3150,14 @@ ul.edd_bundled_product_files {
 	.entry {
 		margin: 0;
 	}
-	.entry-title { 
+	.entry-title {
 		font-size: 30px;
 	}
 	.entry-header .entry-meta,
 	.entry-meta {
 		font-size: 15px;
 	}
-	
+
 	.latest-posts .item,
 	.author-box,
 	.comment-respond,
@@ -3201,13 +3167,13 @@ ul.edd_bundled_product_files {
 	.entry-comments {
 		margin-bottom: 40px;
 	}
-	
+
 
 
 	.archive-pagination li a {
 		margin-bottom: 4px;
 	}
-	
+
 
 
 
@@ -3218,15 +3184,15 @@ ul.edd_bundled_product_files {
 	.account-menu #menu-item-logout {
 		float: none;
 	}
-	
+
 	.pricing-table .one-third,
 	.pricing-table .one-third:nth-child(3n+1),
 	.pricing-table .one-third:nth-child(3n+3) {
 		margin: 0;
 	}
-	
 
-	
+
+
 	.footer-widgets {
 		padding-top: 60px;
 	}
@@ -3235,7 +3201,7 @@ ul.edd_bundled_product_files {
 	.footer-widgets-3 {
 		width: 100%;
 	}
-	
+
 	/* Featured Layout */
 	.features .one-half {
 		padding: 0 0 15px;
@@ -3249,13 +3215,13 @@ ul.edd_bundled_product_files {
 	.features-title p {
 		font-size: 18px;
 	}
-	
+
 	/* Flex box */
 	.grid.columns .item {
 		width: 100%;
 	}
-	
-	
+
+
 	/* Columns */
 	.five-sixths,
 	.four-sixths,
@@ -3271,12 +3237,12 @@ ul.edd_bundled_product_files {
 		margin: 0;
 		width: 100%;
 	}
-		
+
 	/* Useful Classes */
 	.screenshot {
 		width: 100%;
 	}
-	
+
 	.featured-block {
 		margin-bottom: 50px;
 	}
@@ -3297,14 +3263,14 @@ ul.edd_bundled_product_files {
 	.questions .one-half.first p:last-child {
 		margin-bottom: 28px;
 	}
-	
+
 	.search-results-wrapper {
 		width: 100%;
 		padding: 60px 6%;
 	}
-	
+
 	.edd-payment-icons,
-	#edd_payment_mode_select,	
+	#edd_payment_mode_select,
 	#edd_checkout_user_info,
 	#edd_register_account_fields,
 	#edd_login_fields p:nth-child(n+2),
@@ -3326,7 +3292,7 @@ ul.edd_bundled_product_files {
 	.home-featured .home-widgets-1 {
 		font-size: 16px;
 	}
-	
+
 	.home-widgets-1 h1 {
 		font-size: 40px;
 	}
@@ -3337,13 +3303,13 @@ ul.edd_bundled_product_files {
 		width: 100%;
 		margin: 0 0 15px 0;
 	}
-	
+
 	.home-widgets-2 .steps-text {
 		padding: 40px 40px 20px;
 	}
-	
 
-	
+
+
 	.documentation-wrapper {
 		width: 100%
 	}
