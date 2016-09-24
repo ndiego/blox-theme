@@ -27,7 +27,6 @@ add_theme_support( 'genesis-responsive-viewport' );
 // Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'blox_load_scripts' );
 function blox_load_scripts() {
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700', array(), CHILD_THEME_VERSION );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700', array(), CHILD_THEME_VERSION );
 
 	wp_enqueue_style( 'dashicons' );

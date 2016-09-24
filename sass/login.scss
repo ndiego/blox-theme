@@ -1,0 +1,86 @@
+/* Custom login CSS for bloxwp.com
+-------------------------------------------------------------- */
+
+@import "blox-fonts";
+@import "style-guide";
+
+body {
+	background-color: $background-color !important;
+}
+
+#login h1 a {
+  background-image: url("");
+  color: $primary-color;
+  display: block;
+	font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+	font-weight: 400;
+	height: auto;
+	line-height: 1.3em;
+	margin: 0 auto 25px;
+	padding: 0;
+	width: 100%;
+	text-indent: 0;
+	text-transform: lowercase;
+	outline: 0;
+
+  &:before {
+  	font-family: 'blox-icons';
+  	speak: none;
+  	font-style: normal;
+  	font-weight: normal;
+  	font-variant: normal;
+  	text-transform: none;
+  	padding-right: 5px;
+  	vertical-align: top;
+  	content: "\ea1e";
+  }
+}
+
+.login {
+  form {
+  	-webkit-box-shadow: none;
+  	box-shadow: none;
+  	padding: 26px 24px 26px;
+  }
+  label {
+	   color: $primary-color;
+  }
+  #backtoblog, #nav {
+	   text-align: center;
+
+     a {
+       color: $primary-color;
+       &:hover {
+         color: $primary-color;
+       }
+     }
+   }
+}
+
+.wp-core-ui .button.button-large {
+	color: #fff;
+	background-color: $secondary-color;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	border: none;
+	border-radius: 0;
+	display: table;
+	font-size: 11px;
+	font-weight: 700;
+	height: auto !important;
+	letter-spacing: 2px;
+	line-height: 9px;
+	margin: 0;
+	max-width: 200px;
+	padding: 10px 24px;
+	text-align: center;
+	text-shadow: none;
+	text-transform: uppercase;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+    text-align: center;
+  }
+}

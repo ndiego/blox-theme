@@ -1,0 +1,239 @@
+/* Easy Digital Downloads
+--------------------------------------------- */
+.edd-login-form-container {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+#edd_login_form {
+	background-color: #F0F8FF;
+	padding: 50px 60px;
+	margin-bottom: 30px;
+}
+
+#edd_login_form legend {
+	display: none;
+}
+
+#edd_login_form .edd_submit {
+	width: 100%;
+}
+
+
+/* Manage Sites Page */
+#edd_sl_license_add_site_form .edd-input {
+	width: 50%;
+    margin-right: 10px;
+}
+
+/* Cart */
+#edd_your_order {
+	margin-bottom: 30px;
+}
+#edd_checkout_cart {
+	margin-bottom: 20px;
+}
+#edd_checkout_cart th,
+#edd_checkout_cart td {
+    padding: 5px 15px;
+	border: 1px solid #dbdbdb;
+}
+.edd_cart_header_row th {
+	font-weight: 400;
+    background-color: #f1f1f1;
+}
+.edd_cart_item_price {
+	text-align: right;
+}
+.edd_cart_remove_item_btn span {
+	top: 8px;
+    display: inline-block;
+    position: relative;
+}
+.edd_cart_footer_row th {
+	font-weight: 400;
+	text-align: right;
+}
+.edd_cart_discount_row th {
+    background-color: #fff;
+    font-style: italic;
+    font-weight: 300;
+}
+.edd_discount_remove {
+  top: 8px;
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  vertical-align: top;
+  text-align: center;
+  -webkit-transition: color .1s ease-in 0;
+  transition: color .1s ease-in 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.edd_discount_remove:before {
+	content: "\f335";
+}
+
+#edd-discount {
+	width: 50%;
+    margin-right: 10px;
+}
+
+#edd_checkout_form_wrap fieldset {
+    border: none;
+    margin: 0 0 20px;
+    padding: 0;
+}
+
+#edd_purchase_form_wrap p {
+	margin-bottom: 15px;
+}
+#edd_purchase_form label {
+    display: block;
+    font-weight: 400;
+    margin-bottom: 10px;
+    font-family: 'AvenirLTStd-Heavy', sans-serif;
+    font-size: 17px;
+}
+#edd_checkout_form_wrap .edd-required-indicator {
+	color: red;
+}
+#edd_checkout_form_wrap .edd-description {
+	display:none;
+}
+
+
+#edd-login-account-wrap,
+#edd-new-account-wrap {
+	background-color: #FFE14D;
+	margin-bottom: 40px !important;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#edd_payment_mode_select,
+#edd_checkout_user_info {
+	width: 46%;
+    float: left;
+}
+.edd-payment-icons,
+#edd_register_account_fields {
+	width: 46%;
+    float: right;
+}
+
+#edd_login_fields p:nth-child(n+2),
+#edd_login_fields .edd_errors {
+	width: 46%;
+    float: left;
+    clear: both;
+}
+#edd-discount-error-wrap,
+#edd_purchase_form .edd_errors {
+	background-color: #FF4D4D;
+	clear: both;
+	color: #fff;
+	display: inline-block;
+	margin: 20px 0;
+	padding: 15px 15px 10px;
+	text-align: center;
+	width: 100%;
+}
+#edd_purchase_form .edd_errors p {
+	margin: 0 0 10px;
+}
+
+#edd_terms_agreement {
+	margin-bottom: 20px !important;
+}
+#edd_agree_to_terms {
+	margin-right: 5px;
+}
+
+.edd-payment-mode-label {
+	display: inline-block;
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 12px;
+}
+
+
+#edd-payment-mode-wrap {
+	margin-bottom: 20px;
+}
+
+.edd-payment-icons {
+	position: relative;
+	text-align: right;
+	top: -10px;
+}
+.edd-gateway {
+	margin-right: 8px;
+}
+
+
+#edd_purchase_submit {
+	margin-top: 20px !important;
+	width: 100%;
+}
+
+#edd_purchase_form_wrap {
+	clear: both;
+}
+
+.blox-cart-description {
+	font-size: 16px;
+	margin: 0 0 15px;
+}
+
+
+
+/* Profile Editor */
+#edd_profile_editor_form fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+#edd_profile_editor_form label {
+	display: block;
+    font-weight: 400;
+    margin: 10px 0 5px;
+}
+
+/* Purchase Receipt */
+.edd_sl_license_key_expired,
+.edd_sl_license_key_revoked {
+	color: red;
+	font-style: italic;
+}
+.edd_purchase_receipt_product_name {
+	font-weight: 400;
+}
+.edd_purchase_receipt_product_notes p {
+	margin-bottom: 15px;
+}
+ul.edd_purchase_receipt_files {
+	border-top: 1px solid #dbdbdb;
+	margin: 0 0 10px;
+	padding-top: 10px;
+}
+ul.edd_purchase_receipt_files li {
+	list-style-type: none;
+}
+.edd_bundled_product_name {
+    font-weight: 400;
+    font-style: italic;
+}
+ul.edd_bundled_product_files {
+	margin: 0;
+}

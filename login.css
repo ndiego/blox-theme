@@ -1,85 +1,78 @@
 /* Custom login CSS for bloxwp.com
 -------------------------------------------------------------- */
+/* Blox "square" Icon
+--------------------------------------------- */
 @font-face {
-	font-family: 'blox-icons';
-	src:url('fonts/blox-icon/blox-icons.eot?i3uhg4');
-	src:url('fonts/blox-icon/blox-icons.eot?#iefixi3uhg4') format('embedded-opentype'),
-		url('fonts/blox-icon/blox-icons.ttf?i3uhg4') format('truetype'),
-		url('fonts/blox-icon/blox-icons.woff?i3uhg4') format('woff'),
-		url('fonts/blox-icon/blox-icons.svg?i3uhg4#blox-icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
+  font-family: 'blox-icons';
+  src: url("fonts/blox-icon/blox-icons.eot?i3uhg4");
+  src: url("fonts/blox-icon/blox-icons.eot?#iefixi3uhg4") format("embedded-opentype"), url("fonts/blox-icon/blox-icons.ttf?i3uhg4") format("truetype"), url("fonts/blox-icon/blox-icons.woff?i3uhg4") format("woff"), url("fonts/blox-icon/blox-icons.svg?i3uhg4#blox-icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 body {
-	background-color: #F0F8FF !important;
-}
+  background-color: #f0f8ff !important; }
+
 #login h1 a {
-	background-image: url("");
-	height: auto;
-	font-size: 60px;
-	line-height: 1.3em;
-	margin: 0 auto 25px;
-	padding: 0;
-	width: 100%;
-	text-indent: 0;
-	text-transform: lowercase;
-	outline: 0;
-	display: block;
-	color: #162938;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 400;
-}
-#login h1 a:before {
-	font-family: 'blox-icons';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	padding-right: 5px;
-	vertical-align: top;
-	content: "\ea1e";
-}
-.login label {
-	color: #162938;
-}
+  background-image: url("");
+  color: #162938;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  height: auto;
+  line-height: 1.3em;
+  margin: 0 auto 25px;
+  padding: 0;
+  width: 100%;
+  text-indent: 0;
+  text-transform: lowercase;
+  outline: 0; }
+  #login h1 a:before {
+    font-family: 'blox-icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    padding-right: 5px;
+    vertical-align: top;
+    content: "\ea1e"; }
+
 .login form {
-	-webkit-box-shadow: none;
-	box-shadow: none;
-	padding: 26px 24px 26px;
-}
-.login #backtoblog,
-.login #nav {
-	text-align: center;
-}
-.login #backtoblog a,
-.login #nav a {
-	color: #2e2f33;
-}
-.login #backtoblog a:hover,
-.login #nav a:hover {
-	color: #2e2f33;
-}
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding: 26px 24px 26px; }
+
+.login label {
+  color: #162938; }
+
+.login #backtoblog, .login #nav {
+  text-align: center; }
+  .login #backtoblog a, .login #nav a {
+    color: #162938; }
+    .login #backtoblog a:hover, .login #nav a:hover {
+      color: #162938; }
+
 .wp-core-ui .button.button-large {
-	color: #fff;
-	background-color: #3DAEF1;
-	box-shadow: none;
-	-webkit-box-shadow: none;
-	border: none;
-	border-radius: 0;
-	display: table;
-	font-size: 11px;
-	font-weight: 700;
-	height: auto !important;
-	letter-spacing: 2px;
-	line-height: 9px;
-	margin: 0;
-	max-width: 200px;
-	padding: 10px 24px;
-	text-align: center;
-	text-shadow: none;
-	text-transform: uppercase;
-}
-.wp-core-ui .button.button-large:hover {
-	background-color: #162938;
-}
+  color: #fff;
+  background-color: #3daef1;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border: none;
+  border-radius: 0;
+  display: table;
+  font-size: 11px;
+  font-weight: 700;
+  height: auto !important;
+  letter-spacing: 2px;
+  line-height: 9px;
+  margin: 0;
+  max-width: 200px;
+  padding: 10px 24px;
+  text-align: center;
+  text-shadow: none;
+  text-transform: uppercase; }
+  .wp-core-ui .button.button-large:hover {
+    background-color: #162938;
+    color: #fff;
+    text-align: center; }
