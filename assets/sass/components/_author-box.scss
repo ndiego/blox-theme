@@ -1,0 +1,21 @@
+.author-box {
+	background-color: #fff;
+	padding: 50px 50px;
+	border-bottom: 3px solid #d9d9d9;
+	margin-bottom: 80px;
+}
+
+.author-box-title {
+	font-size: 20px;
+	margin-bottom: 16px;
+}
+
+.author-box p:last-child {
+	margin-bottom: 0;
+}
+
+@include media("screen", "<=tablet") {
+  .author-box {
+    margin-bottom: 40px;
+  }
+}

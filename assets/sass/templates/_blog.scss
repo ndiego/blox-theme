@@ -1,0 +1,52 @@
+.blog .content .entry {
+	margin-bottom: 80px;
+}
+
+.blog .more-link {
+	background-color: #162938;
+	border-radius: 50px;
+	color: #fff;
+	display: block;
+	display: table;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	line-height: 1;
+	margin: 20px auto 0;
+	max-width: 250px;
+	padding: 10px 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.blog .more-link:hover {
+	background-color: #3daef1;
+	color: #fff;
+}
+
+.blog-thumbnail {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 250px;
+
+	background-repeat: no-repeat;
+	background-position: center center;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+	background-size: cover;
+}
+
+.blog-thumbnail a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+@include media("screen", "<=tablet") {
+  .blog .content .entry {
+    margin-bottom: 40px;
+  }
+}

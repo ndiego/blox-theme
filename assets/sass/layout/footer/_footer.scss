@@ -1,0 +1,21 @@
+@import "footer-widgets";
+
+.site-footer {
+  color: $primary-color;
+	font-size: 14px;
+	line-height: 2;
+	text-align: center;
+	padding-bottom: 8%;
+
+  p {
+  	margin-bottom: 0;
+  }
+
+  a {
+  	color: $primary-color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}

@@ -1,0 +1,227 @@
+// Main navigation menu
+.nav-primary {
+	float: right;
+
+  @include media("screen", "<=desktop") {
+    float: none;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .wrap {
+    padding: 0;
+  }
+
+  .menu-item {
+  	display: inline-block;
+
+    // Display the submenu on hover if there is one
+    &:hover > .sub-menu {
+    	left: auto;
+    	opacity: 1;
+    }
+  }
+
+  li {
+    @include media("screen", "<=desktop") {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  li:last-child a {
+  	margin-right: 0;
+  }
+
+  a {
+  	color: $primary-color;
+  	display: block;
+  	font-family: $font-medium;
+  	font-size: 16px;
+  	letter-spacing: 1px;
+  	line-height: 1;
+    margin-right: 30px;
+    padding-bottom: 13px;
+  	position: relative;
+
+    @include media("screen", "<=desktop") {
+      font-size: 20px;
+    }
+
+    &:hover, &:focus {
+      color: $secondary-color;
+    }
+  }
+
+  .current-menu-item > a {
+  	color: $secondary-color;
+  }
+
+  // Get Blox Button
+  .get-blox a {
+  	background-color: $secondary-color;
+  	color: #fff;
+  	padding: 15px 20px 13px;
+  	text-align: center; // A little redundant but corrects on mobile
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  // Nav item with a submenu, add down arrow
+  .menu-item-has-children {
+    a:after {
+    	display: inline-block;
+    	font-family: 'dashicons';
+    	font-style: normal;
+    	font-weight: normal;
+    	line-height: 0;
+    	margin: 0;
+    	padding-left: 5px;
+    	position: relative;
+    	text-align: center;
+    	top: -1px;
+    	vertical-align: middle;
+    	content: "\f347";
+    }
+    .sub-menu a:after {
+    	content: "";
+    }
+  }
+
+  .sub-menu {
+  	left: -9999px;
+  	opacity: 0;
+  	padding: 10px;
+  	position: absolute;
+  	width: 170px;
+  	z-index: 99;
+    @include transition(0.4s);
+
+    @include media("screen", "<=desktop") {
+      left: 0;
+      opacity: 1;
+      padding: 15px 0 0 30px;
+      position: relative;
+      display: none;
+      width: 100%;
+    }
+
+    &:before {
+      border-color: #162938 transparent;
+      border-width: 0 10px 10px;
+      border-style: solid;
+      content: "";
+      top: 0;
+      left: 20px;
+      position: absolute;
+
+      @include media("screen", "<=desktop") {
+        content: none;
+      }
+    }
+
+    .sub-menu {
+      margin: -54px 0 0 169px;
+    }
+
+    a {
+      background-color: $primary-color;
+      color: #ddd;
+      font-family: $font-book;
+      font-size: 14px;
+      padding: 12px 15px;
+      position: relative;
+      width: 170px;
+
+      @include media("screen", "<=desktop") {
+        background-color: #fff;
+        color: $primary-color;
+        font-family: $font-medium;
+        font-size: 18px;
+				padding: 0;
+        position: relative;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: #2E3A44;
+        color: #fff;
+
+        @include media("screen", "<=desktop") {
+          background-color: #fff;
+          color: $secondary-color;
+        }
+      }
+    }
+
+
+
+  }
+}
+
+// Responsive menu icon
+#responsive-menu-icon {
+	cursor: pointer;
+	display: none;
+	text-align: right;
+
+  @include media("screen", "<=desktop") {
+    display: block;
+  }
+
+  &::before {
+    color: $primary-color;
+    content: "\f333";
+    font: normal 36px/.8px 'dashicons';
+    line-height: 1;
+    margin: 0 auto;
+    speak: none;
+    text-transform: none;
+  }
+}
+
+
+
+// Custom styling for when the responsive menu is open
+@include media("screen", "<=desktop") {
+  .nav-primary.responsive-menu {
+    display: none;
+    padding-top: 60px;
+  }
+
+  body.nav-show {
+    height: 100%;
+    overflow: hidden; /* Browser jumps to top of page, but shouldn't be an issue */
+  }
+
+  .nav-show {
+    .site-header {
+      background-color: #fff;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: fixed;
+      z-index: 10;
+      overflow: scroll;
+    }
+    .responsive-menu {
+      display: block;
+    }
+    #responsive-menu-icon:before {
+      content: "\f335";
+    }
+  }
+}
+
+@include media("screen", "<=tablet") {
+  .admin-bar.nav-show {
+    .site-header {
+      top: 46px;
+      z-index: 499;
+    }
+  }
+}

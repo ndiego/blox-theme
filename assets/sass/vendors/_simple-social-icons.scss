@@ -1,0 +1,13 @@
+/* Simple Social Icons
+--------------------------------------------- */
+
+.simple-social-icons li a {
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -moz-transition: -moz-transform 0.4s ease-out;
+    transition: transform 0.4s ease-out;
+}
+
+.footer-widgets .simple-social-icons ul li a,
+.footer-widgets .simple-social-icons ul li a:hover {
+	padding: 0 8px 0 0;
+}

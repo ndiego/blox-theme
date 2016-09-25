@@ -1,0 +1,144 @@
+.features-container {
+	overflow: hidden;
+}
+
+.features-container .feature {
+	width: 50%;
+	float: left;
+	margin-bottom: 40px;
+	padding-right: 40px;
+
+	@include media("screen","<=tablet"){
+		margin-bottom: 30px;
+		padding-right: 25px;
+	}
+	@include media("screen","<=phone"){
+		margin-bottom: 20px;
+		padding: 0;
+		width: 100%;
+	}
+
+	h4 {
+
+	}
+	p {
+		font-size: 17px;
+	}
+	.dashicons {
+    font-size: 28px;
+    height: 0;
+    width: 20px;
+    display: inline-block;
+    margin-right: 20px;
+	}
+
+	&:nth-child(odd) {
+		clear: both;
+	}
+	&:nth-child(even) {
+		float: right;
+		padding-right: 0;
+		padding-left: 40px;
+
+		@include media("screen","<=tablet"){
+			padding-left: 25px;
+		}
+		@include media("screen","<=phone"){
+			padding: 0;
+		}
+	}
+}
+
+
+// DO NOT KNOW IF I NEED EVERYTHING BELOW
+
+
+.featured-block {
+	border-bottom: 3px solid #f2f2f2;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+}
+.featured-block.last {
+	border-bottom: none;
+}
+
+.featured-block.left .featured-image {
+	float: right;
+}
+
+.featured-block.left .featured-content {
+	padding: 10px 30px 10px 0;
+	margin-left: 0;
+	margin-right: 2.564102564102564%;
+}
+
+
+
+.features {
+	text-align: left;
+}
+/*.features .dashicons {
+	font-size: 64px;
+	height: 64px;
+	margin: 0 0 20px;
+	width: 64px;
+}*/
+
+.features .dashicons {
+    font-size: 28px;
+    height: 0;
+    width: 20px;
+    display: inline-block;
+    margin-right: 20px;
+
+}
+.features.internal {
+	text-align: left;
+	margin-bottom: 30px;
+}
+.features.internal .dashicons {
+    font-size: 28px;
+    height: 0;
+    width: 20px;
+    display: inline-block;
+    margin-right: 20px;
+}
+.features .one-half {
+	padding: 0 30px 15px;
+}
+.features-title {
+	margin: 20px 0 60px
+}
+.features-title h2 {
+	font-size: 36px;
+	margin-bottom: 5px;
+}
+.features-title p {
+	font-size: 20px;
+}
+
+
+@include media("screen","<=tablet"){
+  .features .one-half {
+		padding: 0 0 15px;
+	}
+	.features .one-half.first {
+		margin-bottom: 30px;
+	}
+	.features-title h2 {
+		font-size: 30px;
+	}
+	.features-title p {
+		font-size: 18px;
+	}
+
+  .featured-block {
+    margin-bottom: 50px;
+  }
+
+  .featured-block.left .featured-content {
+    padding: 0 0 20px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

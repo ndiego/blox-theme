@@ -1,0 +1,53 @@
+.alignleft {
+	float: left;
+	text-align: left;
+}
+
+.alignright {
+	float: right;
+	text-align: right;
+}
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+	max-width: 100%;
+}
+
+a.aligncenter img {
+	display: block;
+	margin: 0 auto;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 24px;
+}
+
+a.alignnone {
+	display: inline-block;
+}
+
+img.alignnone,
+.alignnone {
+	margin-bottom: 24px;
+}
+
+a.alignleft,
+img.alignleft {
+	margin: 0 24px 24px 0;
+}
+
+a.alignright,
+img.alignright {
+	margin: 0 0 24px 24px;
+}
+
+.wp-caption.alignleft {
+	margin: 0 24px 24px 0;
+}
+
+.wp-caption.alignright {
+	margin: 0 0 24px 24px;
+}

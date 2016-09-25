@@ -1,0 +1,64 @@
+#blox-comparison-chart .included,
+#blox-comparison-chart .not-included {
+	color: #fff;
+}
+#blox-comparison-chart .included::before {
+	color: #9bc23c;
+	content: '\2713';
+	display: inline-block;
+	font-family: "icon-font";
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	line-height: 1em;
+	margin-left: .2em;
+	margin-right: .2em;
+	speak: none;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	width: 1em;
+}
+#blox-comparison-chart .not-included::before {
+	content: '\2715';
+	color: #ff0000;
+    padding-left: 5px;
+}
+
+
+.example-block {
+	background-color: #eeeeee;
+    margin-bottom: 30px;
+	padding: 25px;
+}
+.example-block p:last-child {
+	margin-bottom: 0;
+}
+
+.example-block.warning {
+	background-color: #FFFBC3;
+}
+
+.example-block.highlight {
+	background-color: #C4E9FF;
+}
+
+
+.get-started {
+	margin: 50px 0 0;
+    padding-top: 60px;
+    border-top: 3px solid #f2f2f2;
+    text-align: center;
+}
+
+
+.screenshot {
+	width: 90%;
+	border: 10px solid #f1f1f1;
+}
+
+@include media("screen", "<=tablet"){
+  .screenshot {
+    width: 100%;
+  }
+}

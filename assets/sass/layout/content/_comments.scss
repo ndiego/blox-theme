@@ -1,0 +1,84 @@
+.comment-respond,
+.entry-comments,
+.entry-pings {
+	margin: 60px 0;
+	background-color: #fff;
+}
+
+.comment-respond {
+	padding-bottom: 30px;
+}
+
+.entry-comments,
+.entry-pings {
+	padding-bottom: 80px;
+}
+
+.comment-content {
+	clear: both;
+}
+
+.comment-content p:last-child {
+	margin-bottom: 10px
+}
+
+.comment-list {
+	margin-left: 0;
+}
+
+.comment-list li {
+    padding: 40px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.comment-list li li {
+	margin-right: -40px;
+	margin-top: 0;
+    padding: 40px 40px 0;
+    border-bottom: none;
+}
+
+.comment-header a {
+	color: #162938;
+}
+
+.comment-header a:hover {
+	color: #3daef1;
+}
+
+.comment-author,
+.comment-reply-link {
+	font-weight: 400;
+}
+
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+	width: 50%;
+}
+
+.comment-respond label {
+	display: block;
+	margin-right: 12px;
+}
+
+.entry-comments .comment-author {
+	margin-bottom: 0;
+}
+
+.entry-pings .reply {
+	display: none;
+}
+
+.form-allowed-tags {
+	background-color: #f5f5f5;
+	font-size: 16px;
+	padding: 24px;
+}
+
+@include media("screen", "<=tablet") {
+  .comment-respond,
+	.entry-comments {
+		margin-bottom: 40px;
+	}
+}

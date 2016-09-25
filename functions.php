@@ -442,3 +442,21 @@ function blox_empty_checkout_cart() {
 	</div>
 	<?php
 }
+
+
+function blox_main_styles() {
+	if ( SCRIPT_DEBUG || WP_DEBUG ) {
+		wp_register_style(
+			'blox_main_styles',
+			get_bloginfo( 'stylesheet_directory' ) . '/assets/css/style.css', '', '1.0', 'screen'
+		);
+		wp_enqueue_style( 'blox_main_styles' );
+	} else {
+		wp_register_style(
+			'blox_main_styles',
+			get_bloginfo( 'stylesheet_directory' ) . '/assets/css/style-min.css', '', '1.0', 'screen'
+		);
+		wp_enqueue_style( 'blox_main_styles' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'blox_main_styles' );

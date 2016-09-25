@@ -1,0 +1,39 @@
+/* Account
+--------------------------------------------- */
+
+.blox-account .content {
+	padding-top: 40px;
+}
+.menu-account-nav-menu-container {
+	border-bottom: 3px solid #f1f1f1;
+	font-size: 18px;
+	margin-top: 50px;
+}
+.account-menu .menu-item {
+    display: inline-block;
+    text-align: left;
+}
+.account-menu li a {
+	color: #162938;
+	display: block;
+    position: relative;
+    padding: 10px 20px 10px;
+}
+.account-menu li a:hover,
+.account-menu li.current-menu-item a {
+	color: #3daef1;
+}
+.account-menu #menu-item-logout {
+	float: right;
+}
+
+
+@include media("screen","<=tablet"){
+	.menu-account-nav-menu-container {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+	.account-menu #menu-item-logout {
+		float: none;
+	}
+}

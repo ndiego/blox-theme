@@ -1,0 +1,48 @@
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	background-color: $secondary-color;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+  font-family: $font-medium;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 1;
+	padding: 15px 20px;
+	text-align: center;
+	width: auto;
+  @include transition(0.1s);
+
+  &:hover {
+    background-color: $primary-color;
+  	color: #fff;
+  }
+}
+
+.button.button-secondary,
+.button.button-buy {
+	background-color: $primary-color;
+	color: #fff;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+.button.button-buy {
+    font-size: 24px;
+    padding: 20px 40px;
+}
+
+.button {
+	display: inline-block;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+	display: none;
+}

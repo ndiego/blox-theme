@@ -1,0 +1,65 @@
+.page-title {
+	color: #162938;
+	padding: 200px 0 80px;
+	text-align: center;
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .archive-title,
+  .entry-title {
+      font-size: 50px;
+  		font-family: 'AvenirLTStd-Heavy', san-serif;
+      letter-spacing: 2px;
+  }
+}
+
+.title-categories {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.title-meta {
+	color: #162938;
+	font-size: 15px;
+	margin-top: 15px;
+}
+
+.entry-title {
+	font-size: 36px;
+}
+
+.archive-description p,
+.entry-subtitle {
+	color: rgba(255, 255, 255, 0.75);
+	margin: 5px 0 0;
+	font-size: 22px;
+}
+
+.content .entry-title a,
+.grid .entry-title a,
+.sidebar .widget-title a {
+	color: #162938;
+}
+
+.entry-title a:hover {
+	color: #3daef1;
+}
+
+@include media("screen","<=desktop"){
+  .page-title,
+	.error404 .page-title {
+		padding: 100px 0 40px;
+	}
+
+	.page-title .archive-title,
+	.page-title .entry-title {
+		font-size: 36px;
+	}
+
+	.archive-description p,
+	.entry-subtitle {
+		font-size: 18px;
+	}
+}

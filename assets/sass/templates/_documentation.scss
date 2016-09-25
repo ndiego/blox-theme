@@ -1,0 +1,149 @@
+/* Documentation Pages
+--------------------------------------------- */
+
+/* Documentation Single Pages
+.documentation-home {
+	border-top: 3px solid #dbdbdb;
+	margin-top: 30px;
+	padding-top: 15px;
+}*/
+.documentation-toc {
+    background-color: #F0F8FF;
+    padding: 25px 20px 15px;
+}
+
+/* Documentation Archive Page */
+#search_container {
+	max-width: 800px;
+	margin: 0 auto;
+	position: relative;
+	padding-top: 10px;
+}
+#search_container input[type="text"] {
+	border: 1px solid #dbdbdb
+}
+#search_results {
+background-color: #F0F8FF;
+	width: 100%;
+}
+#search_results h3 {
+	color: #162938;
+	margin-bottom: 25px;
+}
+#search_results h4 {
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+#search_results .dashicons {
+	line-height: 1.2;
+	font-size: 18px;
+}
+#search_results p {
+	font-size: 15px;
+	padding: 0;
+	margin: 0
+}
+.search-results-wrapper {
+
+	max-width: 800px;
+    margin: 0 auto 80px;
+	padding: 60px 0 80px;
+}
+.search-result {
+	background: #fff;
+	padding: 30px;
+	margin-bottom: 30px;
+}
+.search-result:last-child {
+	margin-bottom: 0;
+}
+.no-search-results {
+	background: #fff;
+	padding: 30px;
+}
+.submit-search {
+	background-color: transparent;
+	color: #162938;
+	position: absolute;
+	right: 0;
+	top: 14px;
+	font-size: 30px;
+	height: 50px;
+	width: 50px;
+	padding: 0;
+	outline:none;
+	display: inline-block;
+    line-height: 1;
+    font-family: dashicons;
+    text-decoration: inherit;
+    font-weight: 400;
+    font-style: normal;
+    vertical-align: top;
+    text-align: center;
+}
+
+.submit-search:hover {
+	background-color: transparent;
+	color: #3daef1;
+}
+
+.documentation-wrapper {
+	width: 46%;
+	float: left;
+	clear: left;
+}
+
+.documentation-wrapper:nth-child(even) {
+	float: right;
+	clear: right;
+}
+
+
+.documentation-body {
+	margin: 20px 0 50px;
+}
+.documentation-wrapper:last-child .documentation-body {
+	margin-bottom: 30px;
+}
+
+.documentation-body li {
+	margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/*
+.documentation-body a {
+	color: #162938;
+}
+
+.documentation-body a:hover {
+	color: #3daef1;
+}
+*/
+
+.post-type-archive-documentation .page-title h1 {
+	margin-bottom: 25px;
+}
+
+.post-type-archive-documentation .site-inner .content {
+	max-width: 1000px;
+}
+
+@include media( "screen", "<=tablet" ){
+  .search-results-wrapper {
+    width: 100%;
+    padding: 60px 6%;
+  }
+}
+
+
+@media ( min-width: 782px ) {
+	.documentation-body ul {
+		-moz-column-count: 2;
+		-moz-column-gap: 30px;
+		-webkit-column-count: 2;
+		-webkit-gap: 30px;
+		column-count: 2;
+		column-gap: 30px;
+	}
+}

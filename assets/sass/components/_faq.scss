@@ -1,0 +1,28 @@
+.questions h5 {
+	margin-bottom: 10px;
+}
+.questions .one-half {
+	padding: 0 30px;
+}
+.questions .one-half p:last-child {
+	margin-bottom: 10px;
+}
+.questions-title {
+	margin: 20px 0 60px
+}
+.questions-title h2 {
+	font-size: 36px;
+	margin-bottom: 5px;
+}
+.questions-title p {
+	font-size: 20px;
+}
+
+@include media( "screen", "<=tablet" ){
+  .questions .one-half {
+    padding: 0;
+  }
+  .questions .one-half.first p:last-child {
+    margin-bottom: 28px;
+  }
+}

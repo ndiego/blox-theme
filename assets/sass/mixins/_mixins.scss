@@ -1,0 +1,10 @@
+@mixin transition($seconds) {
+  -webkit-transition: all $seconds ease-in-out;
+  -moz-transition:    all $seconds ease-in-out;
+  -ms-transition:     all $seconds ease-in-out;
+  -o-transition:      all $seconds ease-in-out;
+  transition:         all $seconds ease-in-out;
+}
+
+@import "include-media";
+@import "dashicons";

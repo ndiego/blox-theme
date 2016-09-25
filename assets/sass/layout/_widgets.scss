@@ -1,0 +1,18 @@
+
+.widget {
+	margin-bottom: 50px;
+	word-wrap: break-word;
+}
+
+.widget-title {
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+.widget-area .widget:last-child {
+	margin-bottom: 0;
+}
+
+.widget ol > li {
+	list-style-type: decimal;
+}

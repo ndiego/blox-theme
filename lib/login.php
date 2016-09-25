@@ -24,7 +24,7 @@ function blox_login_logo_url( $url ) {
 add_action( 'login_enqueue_scripts', 'blox_login_styles' );
 
 function blox_login_styles() {
-	wp_register_style( 'blox-login-styles', get_stylesheet_directory_uri() . '/login.css' );
+	wp_register_style( 'blox-login-styles', get_stylesheet_directory_uri() . 'assets/css/login.css' );
 	wp_enqueue_style( 'blox-login-styles' );
 }
 
@@ -34,6 +34,6 @@ function blox_login_styles() {
  */
 function blox_login_redirect( $redirect_to, $request) {
 	$user = wp_get_current_user();
-	
+
 	return ( is_array( $user->roles ) && in_array( 'administrator', $user->roles ) ) ? admin_url() : home_url();
 }

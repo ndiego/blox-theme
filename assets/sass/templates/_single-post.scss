@@ -1,0 +1,18 @@
+
+.single-post .content .wp-post-image {
+	margin-bottom: 30px
+}
+
+
+.single-post .content .entry {
+	margin-bottom: 80px;
+}
+
+@include media("screen", "<=tablet") {
+  .single-post .content .entry {
+    margin-bottom: 40px;
+  }
+  .single-post article .wp-post-image {
+    display: none;
+  }
+}

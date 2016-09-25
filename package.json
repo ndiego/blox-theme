@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/ndiego/blox-theme-v2#readme",
   "devDependencies": {
+    "browser-sync": "^2.16.0",
     "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
     "gulp-sass": "^2.3.2"
   }
 }

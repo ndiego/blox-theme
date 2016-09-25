@@ -1,0 +1,36 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	line-height: 2;
+	margin-bottom: 40px;
+	width: 100%;
+
+  .title {
+    font-family: $font-heavy;
+  }
+  .name {
+    font-family: $font-medium;
+  }
+}
+
+.fixed-table {
+	table-layout: fixed;
+	line-height: 1.75;
+}
+
+tbody {
+	border-bottom: 1px solid #dbdbdb;
+}
+
+td,
+th {
+	text-align: left;
+	padding: 5px 15px;
+	border: 1px solid #dbdbdb;
+	word-break: break-word;
+}
+
+th {
+	font-weight: 400;
+	background-color: #f1f1f1;
+}

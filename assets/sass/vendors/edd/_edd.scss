@@ -1,24 +1,6 @@
 /* Easy Digital Downloads
 --------------------------------------------- */
-.edd-login-form-container {
-	max-width: 700px;
-	margin: 0 auto;
-}
-
-#edd_login_form {
-	background-color: #F0F8FF;
-	padding: 50px 60px;
-	margin-bottom: 30px;
-}
-
-#edd_login_form legend {
-	display: none;
-}
-
-#edd_login_form .edd_submit {
-	width: 100%;
-}
-
+@import "login-form";
 
 /* Manage Sites Page */
 #edd_sl_license_add_site_form .edd-input {
@@ -160,11 +142,11 @@
 
 .edd-payment-mode-label {
 	display: inline-block;
-    font-family: 'Monsterrat', sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.2;
-    margin: 0 0 12px;
+  font-family: 'Monsterrat', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px;
 }
 
 
@@ -236,4 +218,23 @@ ul.edd_purchase_receipt_files li {
 }
 ul.edd_bundled_product_files {
 	margin: 0;
+}
+
+
+@include media( "screen","<=tablet" ) {
+	.edd-payment-icons,
+	#edd_payment_mode_select,
+	#edd_checkout_user_info,
+	#edd_register_account_fields,
+	#edd_login_fields p:nth-child(n+2),
+	#edd_login_fields .edd_errors {
+		width: 100%;
+		float: none;
+	}
+	.edd-payment-icons {
+		text-align: left;
+	}
+	.blox-cart-description {
+		font-size: 15px;
+	}
 }

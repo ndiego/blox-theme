@@ -1,0 +1,462 @@
+
+.home .site-inner {
+	display: none;
+}
+
+.home-widgets {
+  h1, h2 {
+  	font-size: 40px;
+		@include media("screen", "<=desktop") {
+			font-size: 36px
+		}
+		@include media("screen", "<=tablet") {
+			font-size: 30px
+		}
+  }
+
+	h3 {
+		@include media("screen", "<=tablet") {
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+	}
+
+  .button {
+    font-size: 20px;
+		padding: 20px 25px;
+		@include media("screen", "<=tablet") {
+			font-size: 18px;
+			padding: 18px 20px;
+		}
+  }
+
+  .wrap {
+    max-width: 1000px;
+  }
+
+  .section-header {
+    text-align: center;
+		max-width: 840px;
+		margin:0 auto;
+
+		h3 {
+				font-family: $font-medium;
+		}
+  }
+
+  // Featured Post Widget Styles
+  .featuredpost {
+  	max-width: 100%;
+  	padding: 0;
+  	margin: 0 auto;
+
+    .widget-wrap {
+    	display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: row wrap;
+      -webkit-justify-content: space-between;
+      flex-flow: row wrap;
+      justify-content: space-between;
+    }
+
+    .entry {
+      background-color: #fff;
+    	width: 30%;
+    	display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: column;
+      flex-flow: column;
+
+      // Link wrapping featured image
+      a.alignnone {
+      	line-height: 0;
+        display: block;
+        margin-bottom: 0;
+      }
+    }
+
+    .entry-header {
+      padding: 30px 30px 0;
+
+      h2.entry-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+        a {
+        	color: $primary-color;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+
+    .entry-content {
+    	margin: 0 30px 40px;
+
+      p {
+        font-size: 17px;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin:0;
+        }
+      }
+      a.button {
+        background-color: #fff;
+        color: $secondary-color;
+        font-family: $font-book;
+        font-size: 17px;
+        letter-spacing: 0px;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+
+        &:hover {
+          color: $primary-color;
+        }
+
+        &::after {
+          @include dashicon('dashicons-arrow-right-alt2');
+          font-size: 17px;
+          margin-left: 2px;
+        }
+      }
+    }
+  }
+  // End - Featured Post Widget Styles
+
+  // Call to action block styles
+  .cta {
+    .text {
+    	float: left;
+      text-align: left;
+
+      h4 {
+        color: #fff;
+      	font-size: 30px;
+        margin: 0 0 7px;
+      }
+      p {
+      	color: #B8E3F5;
+      	font-size: 14px;
+        margin: 0;
+      }
+      a, a:hover {
+      	color: #B8E3F5;
+      	text-decoration: underline;
+      }
+    }
+
+    .action {
+      float: right;
+      width: 190px;
+      margin: 0;
+
+      a.button {
+        width: 100%;
+
+        &:hover {
+          color: $primary-color;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+  // End - Call to action block styles
+
+}
+
+
+.home-widgets-1 {
+	width: 100%;
+	padding: 200px 0 160px;
+
+	@include media("screen", "<=tablet") {
+		padding: 140px 0 80px;
+		text-align: center;
+	}
+
+	.button {
+		@include media("screen", "<=tablet") {
+			display: block;
+			width: 250px;
+			margin: 0 auto;
+		}
+	}
+
+  .button .dashicons {
+  	height: 15px;
+  	line-height: .9;
+  }
+
+  .button-secondary {
+  	margin-left: 30px;
+
+		@include media("screen", "<=tablet") {
+			margin: 20px auto 0;
+		}
+  }
+
+  p {
+  	font-size: 20px;
+  	margin-bottom: 35px;
+  	padding: 0;
+
+		@include media("screen", "<=tablet") {
+			font-size: 18px;
+		}
+  }
+}
+
+
+.home-widgets-2 {
+	background-color: $background-color;
+	padding: 140px 0;
+	text-align: center;
+
+	@include media("screen", "<=tablet") {
+		padding: 80px 0 100px;
+		text-align: center;
+	}
+}
+
+
+.blox-steps {
+	margin-top: 100px;
+
+	@include media("screen", "<=tablet") {
+		margin-top: 70px;
+	}
+
+	.blocks {
+		margin-bottom: 30px;
+
+		@include media("screen", "<=tablet") {
+			margin-bottom: 20px;
+		}
+
+	  span {
+	  	background-color: $background-color;
+	  	width: 20px;
+	  	height: 20px;
+	  	display: inline-block;
+	  	margin-right: 10px;
+	  }
+
+	  span.active {
+	  	background-color: $secondary-color;
+	  }
+	  span.completed {
+	  	background-color: $primary-color;
+	  }
+	}
+
+	.step-image {
+		line-height: 0;
+		width: 50%;
+		float: left;
+	}
+
+	.step-image.offset {
+		float: right;
+	}
+
+	.step-text {
+		width: 50%;
+		float: left;
+		background-color: #fff;
+		text-align: left;
+		padding: 60px;
+		height: 500px;
+		width: 50%;
+		float: left;
+
+	  h3 {
+	  	font-size: 26px;
+	  	margin-bottom: 20px;
+	  }
+
+	  p {
+	  	font-size: 17px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+	  }
+	}
+}
+
+
+.home-widgets-3 {
+	background-color: $secondary-color;
+	padding: 80px 0;
+
+  .wrap {
+  	max-width: 860px;
+  }
+}
+
+
+.home-widgets-4 {
+	padding: 120px 0;
+
+	@include media("screen", "<=tablet") {
+		padding: 80px 0 100px;
+	}
+
+  .features-container {
+  	margin: 80px auto 20px;
+  	max-width: 850px;
+
+		@include media("screen", "<=tablet") {
+			margin: 60px auto 20px;
+		}
+  }
+
+  .features-links {
+    font-family: $font-medium;
+  	font-size: 18px;
+  	text-align: center;
+
+    a.text {
+    	margin-left: 40px;
+      color: $primary-color;
+
+			@include media("screen", "<=phone") {
+				display: block;
+				font-size: 16px;
+				margin: 25px auto 0;
+			}
+
+      &:hover {
+        color: $secondary-color;
+      }
+
+      .dashicons {
+      	line-height: 3.1;
+				@include media("screen", "<=tablet") {
+					line-height: 2.8;
+				}
+				@include media("screen", "<=phone") {
+					font-size: 18px;
+					line-height: 1.5;
+				}
+      }
+    }
+  }
+}
+
+
+.home-widgets-5 {
+	background: $background-color;
+	padding: 100px 0 120px;
+
+  .featured-content {
+    padding-top: 20px;
+  }
+}
+
+
+.home-widgets-6 {
+	background-color: $secondary-color;
+	padding: 80px 0;
+}
+
+
+
+@include media("screen", "<=desktop") {
+
+
+
+
+	.home-widgets-3 {
+    .text,
+  	.action {
+  		float: none;
+  		text-align: center;
+  		width: 100%;
+  	}
+    .action a.button {
+  		margin-top: 30px;
+  		width: 190px;
+  	}
+  }
+
+	.blox-steps {
+		.step {
+			width:50%;
+			float:left;
+			margin-bottom: 60px;
+
+			&:nth-child(odd) {
+				padding-right: 20px;
+				clear:both;
+			}
+			&:nth-child(even) {
+				padding-left: 20px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+    .step-text,
+    .step-image,
+    .step-image.offset {
+      float: none;
+      width: 100%;
+      height: auto;
+    }
+    .step-image img {
+  		width: 100%;
+  	}
+		.step-text {
+			padding: 40px;
+
+			p:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@include media("screen", "<=tablet") {
+
+  .home-widgets {
+
+    .featuredpost {
+      .widget-wrap {
+        padding: 80px 5% 40px;
+      }
+
+      .entry {
+        margin: 0 0 0 60px;
+        width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+	.blox-steps {
+		.step {
+			width: 100%;
+			float: none;
+			margin-bottom: 60px;
+
+			&:nth-child(odd) {
+				padding-right: 0;
+			}
+			&:nth-child(even) {
+				padding-left: 0;
+			}
+		}
+
+		.step-text {
+			padding: 30px;
+		}
+	}
+}

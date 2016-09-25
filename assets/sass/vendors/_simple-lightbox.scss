@@ -1,0 +1,18 @@
+/* Simple Lightbox
+--------------------------------------------- */
+#slb_viewer_wrap .slb_theme_slb_default .slb_container {
+	border-radius: 0 !important;
+}
+.slb_details {
+	margin-top: 10px !important;
+}
+#slb_viewer_wrap .slb_theme_slb_default .slb_data_title {
+	font-family: 'AvenirLTStd-Heavy', sans-serif !important;
+	font-size: 18px !important;
+	margin-top: 10px !important;
+ }
+#slb_viewer_wrap .slb_theme_slb_default .slb_data_desc {
+    	display: block;
+    	margin-top: 0.5em;
+    	font-size: 14px !important;
+}

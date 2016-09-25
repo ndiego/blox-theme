@@ -1,0 +1,38 @@
+input,
+select,
+textarea {
+	background-color: #fff;
+	border: 1px solid #dbdbdb;
+	box-shadow: none;
+	color: #162938;
+	font-size: 16px;
+	font-weight: 300;
+	line-height: normal;
+	padding: 16px;
+}
+
+input,
+textarea {
+	width: 100%;
+
+  &:focus {
+    border: 1px solid #999;
+    outline: none;
+    @include transition(0.1s);
+  }
+}
+
+input[type="checkbox"],
+input[type="image"],
+input[type="radio"] {
+	width: auto;
+}
+
+::-moz-placeholder {
+	color: #9B9B9B;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #9B9B9B;
+}

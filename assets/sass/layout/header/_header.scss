@@ -1,0 +1,50 @@
+.site-header {
+  padding: 20px 0 0;
+	position: absolute;
+	width: 100%;
+}
+
+// Site Title
+.title-area {
+	float: left;
+	padding: 0;
+	width: 200px;
+
+  .site-title {
+  	font-family: 'Montserrat', sans-serif;
+  	font-size: 34px;
+  	font-weight: 400;
+  	line-height: 1.1;
+    margin-bottom: 0;
+
+    a {
+      text-shadow: none;
+      text-transform: lowercase;
+      letter-spacing: 0;
+      color: $primary-color;
+
+      &:hover {
+        color: $secondary-color;
+      }
+      &::before {
+        font-family: 'blox-icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        padding-right: 2px;
+        vertical-align: top;
+        content: "\ea1e";
+      }
+    }
+  }
+
+  .site-description {
+      height: 0;
+      text-indent: -9999px;
+      margin-bottom: 0;
+  }
+}
+
+@import "nav";

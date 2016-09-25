@@ -1,0 +1,49 @@
+/*
+	Theme Name: Blox Theme
+	Theme URI: https://www.bloxwp.com/
+	Description: The base theme for bloxwp.com
+	Author: Nick Diego
+	Author URI: http://www.nickdiego.com/
+
+	Version: 1.0
+
+	Template: genesis
+	Template Version: 2.1
+
+	License: GPL-2.0+
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+@import "variables/variables";
+@import "mixins/mixins";
+
+/*--------------------------------------------------------------
+# Custom Fonts - Avenir + Blox
+--------------------------------------------------------------*/
+@import "fonts/fonts";
+
+/*--------------------------------------------------------------
+# Reset - Normalize + custom resets
+--------------------------------------------------------------*/
+@import "resets";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+@import "media/media";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+
+@import "layout/layout";
+
+
+@import "templates/templates";
+
+
+@import "components/components";
+@import "vendors/vendors";

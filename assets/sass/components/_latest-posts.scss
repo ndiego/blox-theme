@@ -1,0 +1,24 @@
+.latest-posts .item {
+	background-color: #fff;
+	margin-bottom: 80px;
+}
+.latest-posts a.entry-image {
+	line-height: 0;
+    display: block;
+}
+
+.latest-posts p.entry-meta {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.latest-posts .entry-time::before {
+	font: normal 16px/1 'dashicons';
+	margin-right: 5px;
+}
+
+@include media("screen", "<=tablet") {
+  .latest-posts .item {
+		margin-bottom: 40px;
+	}
+}

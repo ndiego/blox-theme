@@ -1,0 +1,29 @@
+.wrap {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.site-inner {
+  clear: both;
+	position: relative;
+	overflow: hidden;
+
+  .wrap {
+    margin: 0 auto 80px;
+  }
+}
+
+@include media("screen","<=desktop"){
+  .wrap {
+		max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+	}
+}
+
+@include media("screen","<=tablet"){
+  .site-inner .wrap {
+		padding-left: 0;
+    padding-right: 0;
+	}
+}

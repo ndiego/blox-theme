@@ -1,0 +1,18 @@
+/* Contact Form 7
+--------------------------------------------- */
+div.wpcf7-response-output {
+	background-color: #FFD400;
+	border: none;
+	text-align:center;
+	padding: 15px;
+	margin: 0;
+}
+div.wpcf7-spam-blocked {
+	background-color: #F96A61;
+}
+div.wpcf7-mail-sent-ok {
+	background-color: #3CD67A;
+}
+.contact-form-required {
+	color: #F96A61;
+}

@@ -1,0 +1,212 @@
+@mixin dashicon($icon){
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-family: dashicons;
+  text-decoration: inherit;
+  font-weight: 400;
+  font-style: normal;
+  vertical-align: top;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Admin Menu Icons */
+  @if $icon == 'dashicons-menu'                       { content:"\f333"; }
+  @if $icon == 'dashicons-admin-site'                 { content:"\f319"; }
+  @if $icon == 'dashicons-dashboard'                  { content:"\f226"; }
+  @if $icon == 'dashicons-admin-media'                { content:"\f104"; }
+  @if $icon == 'dashicons-admin-page'                 { content:"\f105"; }
+  @if $icon == 'dashicons-admin-comments'             { content:"\f101"; }
+  @if $icon == 'dashicons-admin-appearance'           { content:"\f100"; }
+  @if $icon == 'dashicons-admin-plugins'              { content:"\f106"; }
+  @if $icon == 'dashicons-admin-users'                { content:"\f110"; }
+  @if $icon == 'dashicons-admin-tools'                { content:"\f107"; }
+  @if $icon == 'dashicons-admin-settings'             { content:"\f108"; }
+  @if $icon == 'dashicons-admin-network'              { content:"\f112"; }
+  @if $icon == 'dashicons-admin-generic'              { content:"\f111"; }
+  @if $icon == 'dashicons-admin-home'                 { content:"\f102"; }
+  @if $icon == 'dashicons-admin-collapse'             { content:"\f148"; }
+
+  /* Both Admin Menu and Post Formats */
+  @if $icon == 'dashicons-admin-links'                { content:"\f103"; }
+  @if $icon == 'dashicons-format-links'               { content:"\f103"; }
+  @if $icon == 'dashicons-admin-post'                 { content:"\f109"; }
+  @if $icon == 'dashicons-format-standard'            { content:"\f109"; }
+
+  /* Post Format Icons */
+  @if $icon == 'dashicons-format-image'               { content:"\f128"; }
+  @if $icon == 'dashicons-format-gallery'             { content:"\f161"; }
+  @if $icon == 'dashicons-format-audio'               { content:"\f127"; }
+  @if $icon == 'dashicons-format-video'               { content:"\f126"; }
+  @if $icon == 'dashicons-format-chat'                { content:"\f125"; }
+  @if $icon == 'dashicons-format-status'              { content:"\f130"; }
+  @if $icon == 'dashicons-format-aside'               { content:"\f123"; }
+  @if $icon == 'dashicons-format-quote'               { content:"\f122"; }
+
+  /* Welcome Screen Icons */
+  @if $icon == 'dashicons-welcome-write-blog'         { content:"\f119"; }
+  @if $icon == 'dashicons-welcome-edit-page'          { content:"\f119"; }
+
+  @if $icon == 'dashicons-welcome-add-page'           { content:"\f133"; }
+  @if $icon == 'dashicons-welcome-view-site'          { content:"\f115"; }
+  @if $icon == 'dashicons-welcome-widgets-menus'      { content:"\f116"; }
+  @if $icon == 'dashicons-welcome-comments'           { content:"\f117"; }
+  @if $icon == 'dashicons-welcome-learn-more'         { content:"\f118"; }
+
+
+  /* Image Editing Icons */
+  @if $icon == 'dashicons-image-crop'                 { content:"\f165"; }
+  @if $icon == 'dashicons-image-rotate-left'          { content:"\f166"; }
+  @if $icon == 'dashicons-image-rotate-right'         { content:"\f167"; }
+  @if $icon == 'dashicons-image-flip-vertical'        { content:"\f168"; }
+  @if $icon == 'dashicons-image-flip-horizontal'      { content:"\f169"; }
+
+  /* Both Image Editing and TinyMCE */
+  @if $icon == 'dashicons-undo'                       { content:"\f171"; }
+  @if $icon == 'dashicons-redo'                       { content:"\f172"; }
+
+  /* TinyMCE Icons */
+  @if $icon == 'dashicons-editor-bold'                { content:"\f200"; }
+  @if $icon == 'dashicons-editor-italic'              { content:"\f201"; }
+  @if $icon == 'dashicons-editor-ul'                  { content:"\f203"; }
+  @if $icon == 'dashicons-editor-ol'                  { content:"\f204"; }
+  @if $icon == 'dashicons-editor-quote'               { content:"\f205"; }
+  @if $icon == 'dashicons-editor-alignleft'           { content:"\f206"; }
+  @if $icon == 'dashicons-editor-aligncenter'         { content:"\f207"; }
+  @if $icon == 'dashicons-editor-alignright'          { content:"\f208"; }
+  @if $icon == 'dashicons-editor-insertmore'          { content:"\f209"; }
+  @if $icon == 'dashicons-editor-spellcheck'          { content:"\f210"; }
+  @if $icon == 'dashicons-editor-distractionfree'     { content:"\f211"; }
+  @if $icon == 'dashicons-editor-kitchensink'         { content:"\f212"; }
+  @if $icon == 'dashicons-editor-underline'           { content:"\f213"; }
+  @if $icon == 'dashicons-editor-justify'             { content:"\f214"; }
+  @if $icon == 'dashicons-editor-textcolor'           { content:"\f215"; }
+  @if $icon == 'dashicons-editor-paste-word'          { content:"\f216"; }
+  @if $icon == 'dashicons-editor-paste-text'          { content:"\f217"; }
+  @if $icon == 'dashicons-editor-removeformatting'    { content:"\f218"; }
+  @if $icon == 'dashicons-editor-video'               { content:"\f219"; }
+  @if $icon == 'dashicons-editor-customchar'          { content:"\f220"; }
+  @if $icon == 'dashicons-editor-outdent'             { content:"\f221"; }
+  @if $icon == 'dashicons-editor-indent'              { content:"\f222"; }
+  @if $icon == 'dashicons-editor-help'                { content:"\f223"; }
+  @if $icon == 'dashicons-editor-strikethrough'       { content:"\f224"; }
+  @if $icon == 'dashicons-editor-unlink'              { content:"\f225"; }
+  @if $icon == 'dashicons-editor-rtl'                 { content:"\f320"; }
+
+  /* Post Icons */
+  @if $icon == 'dashicons-align-left'                 { content:"\f135"; }
+  @if $icon == 'dashicons-align-right'                { content:"\f136"; }
+  @if $icon == 'dashicons-align-center'               { content:"\f134"; }
+  @if $icon == 'dashicons-align-none'                 { content:"\f138"; }
+  @if $icon == 'dashicons-lock'                       { content:"\f160"; }
+  @if $icon == 'dashicons-calendar'                   { content:"\f145"; }
+  @if $icon == 'dashicons-visibility'                 { content:"\f177"; }
+  @if $icon == 'dashicons-post-status'                { content:"\f173"; }
+  @if $icon == 'dashicons-post-trash'                 { content:"\f182"; }
+  @if $icon == 'dashicons-edit'                       { content:"\f327"; }
+  @if $icon == 'dashicons-trash'                      { content:"\f458"; }
+
+  /* Sorting */
+  @if $icon == 'dashicons-arrow-up'                   { content:"\f142"; }
+  @if $icon == 'dashicons-arrow-down'                 { content:"\f140"; }
+  @if $icon == 'dashicons-arrow-left'                 { content:"\f141"; }
+  @if $icon == 'dashicons-arrow-right'                { content:"\f139"; }
+  @if $icon == 'dashicons-arrow-up-alt'               { content:"\f342"; }
+  @if $icon == 'dashicons-arrow-down-alt'             { content:"\f346"; }
+  @if $icon == 'dashicons-arrow-left-alt'             { content:"\f340"; }
+  @if $icon == 'dashicons-arrow-right-alt'            { content:"\f344"; }
+  @if $icon == 'dashicons-arrow-up-alt2'              { content:"\f343"; }
+  @if $icon == 'dashicons-arrow-down-alt2'            { content:"\f347"; }
+  @if $icon == 'dashicons-arrow-left-alt2'            { content:"\f341"; }
+  @if $icon == 'dashicons-arrow-right-alt2'           { content:"\f345"; }
+  @if $icon == 'dashicons-leftright'                  { content:"\f229"; }
+  @if $icon == 'dashicons-sort'                       { content:"\f156"; }
+  @if $icon == 'dashicons-list-view'                  { content:"\f163"; }
+  @if $icon == 'dashicons-exerpt-view'                { content:"\f164"; }
+
+  /* Social Icons */
+  @if $icon == 'dashicons-share'                      { content:"\f237"; }
+  @if $icon == 'dashicons-share1'                     { content:"\f237"; }
+  @if $icon == 'dashicons-share-alt'                  { content:"\f240"; }
+  @if $icon == 'dashicons-share-alt2'                 { content:"\f242"; }
+  @if $icon == 'dashicons-twitter'                    { content:"\f301"; }
+  @if $icon == 'dashicons-rss'                        { content:"\f303"; }
+  @if $icon == 'dashicons-facebook'                   { content:"\f304"; }
+  @if $icon == 'dashicons-facebook-alt'               { content:"\f305"; }
+  @if $icon == 'dashicons-networking'                 { content:"\f325"; }
+  @if $icon == 'dashicons-googleplus'                 { content:"\f462"; }
+
+  /* Jobs Icons */
+  @if $icon == 'dashicons-hammer'                     { content:"\f308"; }
+  @if $icon == 'dashicons-art'                        { content:"\f309"; }
+  @if $icon == 'dashicons-migrate'                    { content:"\f310"; }
+  @if $icon == 'dashicons-performance'                { content:"\f311"; }
+
+  /* Internal/Products */
+  @if $icon == 'dashicons-wordpress'                  { content:"\f120"; }
+  @if $icon == 'dashicons-wordpress-alt'              { content:"\f324"; }
+  @if $icon == 'dashicons-pressthis'                  { content:"\f157"; }
+  @if $icon == 'dashicons-update'                     { content:"\f113"; }
+  @if $icon == 'dashicons-screenoptions'              { content:"\f180"; }
+  @if $icon == 'dashicons-info'                       { content:"\f348"; }
+  @if $icon == 'dashicons-cart'                       { content:"\f174"; }
+  @if $icon == 'dashicons-feedback'                   { content:"\f175"; }
+  @if $icon == 'dashicons-cloud'                      { content:"\f176"; }
+  @if $icon == 'dashicons-translation'                { content:"\f326"; }
+
+  /* Taxonomies */
+  @if $icon == 'dashicons-tag'                        { content:"\f323"; }
+  @if $icon == 'dashicons-category'                   { content:"\f318"; }
+
+  /* Alerts/Notifications/Flags */
+  @if $icon == 'dashicons-yes'                        { content:"\f147"; }
+  @if $icon == 'dashicons-no'                         { content:"\f158"; }
+  @if $icon == 'dashicons-no-alt'                     { content:"\f335"; }
+  @if $icon == 'dashicons-plus'                       { content:"\f132"; }
+  @if $icon == 'dashicons-minus'                      { content:"\f460"; }
+  @if $icon == 'dashicons-dismiss'                    { content:"\f153"; }
+  @if $icon == 'dashicons-marker'                     { content:"\f159"; }
+  @if $icon == 'dashicons-star-filled'                { content:"\f155"; }
+  @if $icon == 'dashicons-star-half'                  { content:"\f459"; }
+  @if $icon == 'dashicons-star-empty'                 { content:"\f154"; }
+  @if $icon == 'dashicons-flag'                       { content:"\f227"; }
+
+  /* Misc/CPT */
+  @if $icon == 'dashicons-location'                   { content:"\f230"; }
+  @if $icon == 'dashicons-location-alt'               { content:"\f231"; }
+  @if $icon == 'dashicons-camera'                     { content:"\f306"; }
+  @if $icon == 'dashicons-images-alt'                 { content:"\f232"; }
+  @if $icon == 'dashicons-images-alt2'                { content:"\f233"; }
+  @if $icon == 'dashicons-video-alt'                  { content:"\f234"; }
+  @if $icon == 'dashicons-video-alt2'                 { content:"\f235"; }
+  @if $icon == 'dashicons-video-alt3'                 { content:"\f236"; }
+  @if $icon == 'dashicons-vault'                      { content:"\f178"; }
+  @if $icon == 'dashicons-shield'                     { content:"\f332"; }
+  @if $icon == 'dashicons-shield-alt'                 { content:"\f334"; }
+  @if $icon == 'dashicons-search'                     { content:"\f179"; }
+  @if $icon == 'dashicons-slides'                     { content:"\f181"; }
+  @if $icon == 'dashicons-analytics'                  { content:"\f183"; }
+  @if $icon == 'dashicons-chart-pie'                  { content:"\f184"; }
+  @if $icon == 'dashicons-chart-bar'                  { content:"\f185"; }
+  @if $icon == 'dashicons-chart-line'                 { content:"\f238"; }
+  @if $icon == 'dashicons-chart-area'                 { content:"\f239"; }
+  @if $icon == 'dashicons-groups'                     { content:"\f307"; }
+  @if $icon == 'dashicons-businessman'                { content:"\f338"; }
+  @if $icon == 'dashicons-id'                         { content:"\f336"; }
+  @if $icon == 'dashicons-id-alt'                     { content:"\f337"; }
+  @if $icon == 'dashicons-products'                   { content:"\f312"; }
+  @if $icon == 'dashicons-awards'                     { content:"\f313"; }
+  @if $icon == 'dashicons-forms'                      { content:"\f314"; }
+  @if $icon == 'dashicons-portfolio'                  { content:"\f322"; }
+  @if $icon == 'dashicons-book'                       { content:"\f330"; }
+  @if $icon == 'dashicons-book-alt'                   { content:"\f331"; }
+  @if $icon == 'dashicons-download'                   { content:"\f316"; }
+  @if $icon == 'dashicons-upload'                     { content:"\f317"; }
+  @if $icon == 'dashicons-backup'                     { content:"\f321"; }
+  @if $icon == 'dashicons-lightbulb'                  { content:"\f339"; }
+  @if $icon == 'dashicons-smiley'                     { content:"\f328"; }
+}

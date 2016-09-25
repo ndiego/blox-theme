@@ -1,0 +1,40 @@
+.content {
+	float: left;
+	padding: 0 100px 50px 0;
+	width: 78%;
+}
+
+.full-width-content .content {
+    float: none;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar {
+	float: right;
+	font-size: 16px;
+	margin-bottom: 0;
+	width: 22%;
+
+  li {
+    margin-bottom: 5px;
+  }
+  ul > li:last-child {
+  	margin-bottom: 0;
+  }
+}
+
+@include media("screen", "<=tablet") {
+  	.full-width-content .content,
+  	.content,
+  	.sidebar {
+  		width: 100%;
+  		padding: 60px 5%;
+  	}
+}
+
+@import "entries";
+@import "comments";
+@import "pagination";

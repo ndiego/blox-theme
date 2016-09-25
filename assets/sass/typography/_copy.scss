@@ -1,0 +1,104 @@
+body {
+	background-color: #fff;
+	color: $text-color;
+	font-family: $font-book;
+	font-size: 18px;
+	line-height: 1.7;
+
+  @include media("screen", "<=tablet") {
+    font-size: 17px;
+  }
+}
+
+::-moz-selection {
+	background-color: $primary-color;
+	color: #fff;
+}
+
+::selection {
+	background-color: $primary-color;
+	color: #fff;
+}
+
+a {
+	color: $secondary-color;
+  cursor: pointer;
+	text-decoration: none;
+  @include transition(0.1s);
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:active,
+  &:focus {
+  	outline: none;
+  }
+}
+
+p {
+	margin: 0 0 28px;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ol {
+	margin-left: 23px
+}
+
+li {
+	list-style-type: none;
+}
+
+b,
+strong {
+	font-family: $font-heavy;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 40px;
+}
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	font-size: 30px;
+	height: 0;
+	left: -20px;
+	position: relative;
+	top: -10px;
+}
+
+fieldset {
+	border: none;
+	margin: 0;
+	padding: 0
+}
+
+legend {
+	font-family: $font-heavy;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+label  {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.dashicons {
+	@include transition(0);
+}
