@@ -57,6 +57,10 @@
       -webkit-justify-content: space-between;
       flex-flow: row wrap;
       justify-content: space-between;
+
+			@include media("screen", "<=tablet") {
+
+			}
     }
 
     .entry {
@@ -67,6 +71,15 @@
       display: flex;
       -webkit-flex-flow: column;
       flex-flow: column;
+
+			@include media("screen", "<=tablet") {
+				margin: 0 0 60px;
+        width: 100%;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
 
       // Link wrapping featured image
       a.alignnone {
@@ -80,6 +93,7 @@
       padding: 30px 30px 0;
 
       h2.entry-title {
+				font-family: $font-medium;
         font-size: 20px;
         margin-bottom: 12px;
         a {
@@ -106,7 +120,7 @@
       a.button {
         background-color: #fff;
         color: $secondary-color;
-        font-family: $font-book;
+        font-family: $font-medium;
         font-size: 17px;
         letter-spacing: 0px;
         padding: 0;
@@ -133,6 +147,11 @@
     	float: left;
       text-align: left;
 
+			@include media("screen", "<=desktop") {
+				float: none;
+				text-align: center;
+			}
+
       h4 {
         color: #fff;
       	font-size: 30px;
@@ -153,6 +172,12 @@
       float: right;
       width: 190px;
       margin: 0;
+
+			@include media("screen", "<=desktop") {
+				float: none;
+				text-align: center;
+				margin: 0 auto;
+			}
 
       a.button {
         width: 100%;
@@ -176,6 +201,10 @@
 	@include media("screen", "<=tablet") {
 		padding: 140px 0 80px;
 		text-align: center;
+	}
+
+	@include media("screen", "<=phone") {
+		padding: 100px 0 80px;
 	}
 
 	.button {
@@ -274,8 +303,9 @@
 		float: left;
 
 	  h3 {
-	  	font-size: 26px;
+	  	font-size: 22px;
 	  	margin-bottom: 20px;
+			text-transform: uppercase;
 	  }
 
 	  p {
@@ -353,6 +383,10 @@
 	background: $background-color;
 	padding: 100px 0 120px;
 
+	@include media("screen", "<=tablet") {
+		padding: 80px 0;
+	}
+
   .featured-content {
     padding-top: 20px;
   }
@@ -423,23 +457,7 @@
 
 @include media("screen", "<=tablet") {
 
-  .home-widgets {
 
-    .featuredpost {
-      .widget-wrap {
-        padding: 80px 5% 40px;
-      }
-
-      .entry {
-        margin: 0 0 0 60px;
-        width: 100%;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
 
 	.blox-steps {
 		.step {

@@ -362,13 +362,19 @@ label {
   transition: all 0 ease-in-out; }
 
 h1,
-h2,
+h2 {
+  color: #162938;
+  font-family: "AvenirLTStd-Heavy", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  margin: 0 0 20px; }
+
 h3,
 h4,
 h5,
 h6 {
   color: #162938;
-  font-family: "AvenirLTStd-Heavy", sans-serif;
+  font-family: "AvenirLTStd-Medium", sans-serif;
   line-height: 1.5;
   letter-spacing: 2px;
   margin: 0 0 20px; }
@@ -1479,6 +1485,13 @@ p.entry-meta {
     display: flex;
     -webkit-flex-flow: column;
     flex-flow: column; }
+
+@media screen and (max-width: 782px) {
+  .home-widgets .featuredpost .entry {
+    margin: 0 0 60px;
+    width: 100%; }
+    .home-widgets .featuredpost .entry:last-child {
+      margin-bottom: 0; } }
     .home-widgets .featuredpost .entry a.alignnone {
       line-height: 0;
       display: block;
@@ -1486,6 +1499,7 @@ p.entry-meta {
   .home-widgets .featuredpost .entry-header {
     padding: 30px 30px 0; }
     .home-widgets .featuredpost .entry-header h2.entry-title {
+      font-family: "AvenirLTStd-Medium", sans-serif;
       font-size: 20px;
       margin-bottom: 12px; }
       .home-widgets .featuredpost .entry-header h2.entry-title a {
@@ -1502,7 +1516,7 @@ p.entry-meta {
     .home-widgets .featuredpost .entry-content a.button {
       background-color: #fff;
       color: #3daef1;
-      font-family: "AvenirLTStd-Book", sans-serif;
+      font-family: "AvenirLTStd-Medium", sans-serif;
       font-size: 17px;
       letter-spacing: 0px;
       padding: 0;
@@ -1546,6 +1560,11 @@ p.entry-meta {
 .home-widgets .cta .text {
   float: left;
   text-align: left; }
+
+@media screen and (max-width: 1024px) {
+  .home-widgets .cta .text {
+    float: none;
+    text-align: center; } }
   .home-widgets .cta .text h4 {
     color: #fff;
     font-size: 30px;
@@ -1562,6 +1581,12 @@ p.entry-meta {
   float: right;
   width: 190px;
   margin: 0; }
+
+@media screen and (max-width: 1024px) {
+  .home-widgets .cta .action {
+    float: none;
+    text-align: center;
+    margin: 0 auto; } }
   .home-widgets .cta .action a.button {
     width: 100%; }
     .home-widgets .cta .action a.button:hover {
@@ -1576,6 +1601,10 @@ p.entry-meta {
   .home-widgets-1 {
     padding: 140px 0 80px;
     text-align: center; } }
+
+@media screen and (max-width: 480px) {
+  .home-widgets-1 {
+    padding: 100px 0 80px; } }
 
 @media screen and (max-width: 782px) {
   .home-widgets-1 .button {
@@ -1648,8 +1677,9 @@ p.entry-meta {
     width: 50%;
     float: left; }
     .blox-steps .step-text h3 {
-      font-size: 26px;
-      margin-bottom: 20px; }
+      font-size: 22px;
+      margin-bottom: 20px;
+      text-transform: uppercase; }
     .blox-steps .step-text p {
       font-size: 17px; }
       .blox-steps .step-text p:last-child {
@@ -1704,6 +1734,10 @@ p.entry-meta {
 .home-widgets-5 {
   background: #f0f8ff;
   padding: 100px 0 120px; }
+
+@media screen and (max-width: 782px) {
+  .home-widgets-5 {
+    padding: 80px 0; } }
   .home-widgets-5 .featured-content {
     padding-top: 20px; }
 
@@ -1745,13 +1779,6 @@ p.entry-meta {
       margin: 0; } }
 
 @media screen and (max-width: 782px) {
-  .home-widgets .featuredpost .widget-wrap {
-    padding: 80px 5% 40px; }
-  .home-widgets .featuredpost .entry {
-    margin: 0 0 0 60px;
-    width: 100%; }
-    .home-widgets .featuredpost .entry:last-child {
-      margin-bottom: 0; }
   .blox-steps .step {
     width: 100%;
     float: none;
