@@ -2,7 +2,7 @@ body {
 	background-color: #fff;
 	color: $text-color;
 	font-family: $font-book;
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 1.7;
 
   @include media("screen", "<=tablet") {
@@ -36,6 +36,10 @@ a {
   }
 }
 
+li.current_menu_item a {
+	color: $secondary-color;
+}
+
 p {
 	margin: 0 0 28px;
 	padding: 0;
@@ -57,7 +61,7 @@ li {
 
 b,
 strong {
-	font-family: $font-heavy;
+	font-family: $font-medium;
 }
 
 blockquote,
@@ -81,6 +85,17 @@ blockquote::before {
 	top: -10px;
 }
 
+code {
+	padding: 2px 4px;
+	margin: 0 2px;
+
+	background-color: #fcfcfc;
+	border-radius: 4px;
+	border: 1px solid #efefef;
+	font-family: monospace;
+	font-size: .9em;
+}
+
 fieldset {
 	border: none;
 	margin: 0;
@@ -94,9 +109,15 @@ legend {
   margin: 0 0 12px;
 }
 
-label  {
+label {
+	color: $primary-color;
 	display: block;
+	font-family: $font-medium;
 	margin-bottom: 5px;
+}
+
+.required {
+	color: $accent-color-red;
 }
 
 .dashicons {

@@ -42,6 +42,14 @@
 		h3 {
 				font-family: $font-medium;
 		}
+
+		p {
+			font-size: 18px;
+
+			@include media("screen", "<=tablet") {
+				font-size: 17px;
+			}
+		}
   }
 
   // Featured Post Widget Styles

@@ -22,8 +22,12 @@
   	margin-bottom: 20px;
   }
 
+	li {
+		padding-bottom: 4px;
+	}
+
   a {
-    color: $primary-color;
+    color: $text-color;
     &:hover {
     	color: $secondary-color;
     }

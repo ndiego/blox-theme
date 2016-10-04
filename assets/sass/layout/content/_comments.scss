@@ -1,3 +1,11 @@
+.entry-comments,
+.comment-respond {
+	h3 {
+		font-size:30px;
+	}
+}
+
+
 .comment-respond,
 .entry-comments,
 .entry-pings {
@@ -9,46 +17,85 @@
 	padding-bottom: 30px;
 }
 
-.entry-comments,
-.entry-pings {
-	padding-bottom: 80px;
-}
-
 .comment-content {
 	clear: both;
-}
 
-.comment-content p:last-child {
-	margin-bottom: 10px
+	p:last-child {
+		margin-bottom: 10px
+	}
 }
 
 .comment-list {
 	margin-left: 0;
+
+	li li {
+		  border-bottom: none;
+			border-left: 1px solid #ececec;
+
+			@include media("screen","<=tablet"){
+				border: none;
+			}
+		}
+
 }
 
-.comment-list li {
-    padding: 40px 0;
-    border-bottom: 1px solid #dbdbdb;
+.comment-list>.comment {
+	padding: 30px 30px 30px 0;
+
+	@include media("screen","<=tablet"){
+		padding: 30px 0;
+	}
 }
 
-.comment-list li li {
-	margin-right: -40px;
-	margin-top: 0;
-    padding: 40px 40px 0;
-    border-bottom: none;
+.comment {
+	padding: 30px;
+
+	@include media("screen","<=tablet"){
+		padding: 30px 0;
+	}
 }
 
-.comment-header a {
-	color: #162938;
+.children {
+	margin-top: 30px;
 }
 
-.comment-header a:hover {
-	color: #3daef1;
+.comment-header {
+	margin-bottom: 20px;
+	position: relative;
+	p {
+		margin-bottom: 0;
+	}
 }
 
-.comment-author,
-.comment-reply-link {
-	font-weight: 400;
+.comment-edit-link {
+	display: inline-block;
+	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	@include media("screen","<=tablet") {
+		float:none;
+		margin-top: 10px;
+		position: relative;
+	}
+}
+
+.comment-time a {
+	color: $text-color;
+	&:hover {
+		color: #3daef1;
+	}
+}
+
+.comment-author {
+	color: $primary-color;
+	font-family: $font-medium;
+	font-size: 20px;
+}
+
+.comment-time {
+	font-size: 15px;
 }
 
 .comment-respond input[type="email"],
@@ -64,6 +111,10 @@
 
 .entry-comments .comment-author {
 	margin-bottom: 0;
+}
+
+.comment-reply {
+	margin-top: 18px;
 }
 
 .entry-pings .reply {

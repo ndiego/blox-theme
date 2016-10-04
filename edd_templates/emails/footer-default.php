@@ -12,17 +12,20 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // For gmail compatibility, including CSS styles in head/body are stripped out therefore styles need to be inline. These variables contain rules which are added to the template inline.
 $template_footer = "
+	background-color: #2e2f33;
 	border-top:0;
-	-webkit-border-radius:3px;
+	border-radius:0;
+	-webkit-border-radius:0px;
 ";
 
 $credit = "
 	border:0;
-	color: #000000;
+	color: #959595;
 	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 	font-size:12px;
 	line-height:125%;
 	text-align:center;
+	padding: 20px 0;
 ";
 ?>
 															</div>
@@ -45,7 +48,7 @@ $credit = "
                                                 <table border="0" cellpadding="10" cellspacing="0" width="100%">
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="credit" style="<?php echo $credit; ?>">
-                                                        	<a href="https://www.bloxwp.com">Blox</a> is a product of <a href="http://www.outermosdesign.com">Outermost Design, LLC</a> &nbsp;&middot;&nbsp;  <a href="mailto:support@bloxwp.com">support@bloxwp.com</a> &nbsp;&middot;&nbsp; <a href="https://www.bloxwp.com/terms-conditions">Terms & Conditions</a>
+                                                        	<a href="https://www.bloxwp.com" style="color:#959595;text-decoration:none">Blox</a> is a product of Outermost Design, LLC &nbsp;&middot;&nbsp;  <a href="mailto:support@bloxwp.com" style="color:#959595;text-decoration:none">support@bloxwp.com</a> &nbsp;&middot;&nbsp; <a href="https://www.bloxwp.com/terms-conditions" style="color:#959595;text-decoration:none">Terms &amp; Conditions</a>
                                                            <?php // echo wpautop( wp_kses_post( wptexturize( apply_filters( 'edd_email_footer_text', '<a href="' . esc_url( home_url() ) . '">' . get_bloginfo( 'name' ) . '</a>' ) ) ) ); ?>
                                                         </td>
                                                     </tr>

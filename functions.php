@@ -6,7 +6,12 @@ include_once( get_template_directory() . '/lib/init.php' );
 //include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 include_once( get_stylesheet_directory() . '/lib/login.php' );
 include_once( get_stylesheet_directory() . '/lib/documentation.php' );
-//include_once( get_stylesheet_directory() . '/lib/shortcodes.php' );
+include_once( get_stylesheet_directory() . '/lib/shortcodes.php' );
+include_once( get_stylesheet_directory() . '/lib/edd.php' );
+
+include_once( get_stylesheet_directory() . '/lib/simple-share-icons.php' );
+
+include_once( get_stylesheet_directory() . '/lib/related-posts.php' );
 
 // Set Localization (do not remove)
 load_child_theme_textdomain( 'blox-theme', apply_filters( 'child_theme_textdomain', get_stylesheet_directory() . '/languages', 'blox' ) );
@@ -27,7 +32,8 @@ add_theme_support( 'genesis-responsive-viewport' );
 // Enqueue Scripts
 add_action( 'wp_enqueue_scripts', 'blox_load_scripts' );
 function blox_load_scripts() {
-	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400,700', array(), CHILD_THEME_VERSION );
+	// Needed for Blox Logo
+	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Montserrat:400', array(), CHILD_THEME_VERSION );
 
 	wp_enqueue_style( 'dashicons' );
 
@@ -68,6 +74,14 @@ add_action( 'genesis_header_right', 'genesis_do_nav' );
 // Unregister secondary sidebar
 unregister_sidebar( 'sidebar-alt' );
 
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
+add_filter( 'genesis_post_info', 'blox_post_info_filter' );
+function blox_post_info_filter($post_info) {
+	$post_info = '[post_date] [post_edit]';
+	return $post_info;
+}
+
 // Do page modifications (mostly title changes)
 add_action( 'genesis_before', 'blox_page_modifications' );
 function blox_page_modifications() {
@@ -76,48 +90,53 @@ function blox_page_modifications() {
 		add_action( 'genesis_after_header', 'blox_open_post_title', 1 );
 		add_action( 'genesis_after_header', 'blox_do_page_title', 2 );
 		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-	} elseif ( is_author() ) {
-    	add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-        add_action( 'genesis_after_header', 'blox_do_author_title', 2 );
-        add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-        add_action( 'genesis_before_entry', 'blox_do_archive_thumbnails' );
-		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+	} elseif ( is_singular( 'post' ) ) {
+  	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+  	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    add_action( 'genesis_after_header', 'blox_do_post_title', 2 );
+    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+    add_action( 'genesis_entry_header', 'blox_do_post_thumbnail' );
+  } elseif ( is_singular( 'download' ) ) {
+	  remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		add_action( 'genesis_after_header', 'blox_open_post_title', 1 );
+		add_action( 'genesis_after_header', 'blox_do_page_title', 2 );
+		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+  } elseif ( is_author() ) {
+    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    add_action( 'genesis_after_header', 'blox_do_author_title', 2 );
+    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
 	} elseif ( is_category() || is_archive() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
 		add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
 		add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 2 );
 		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-        add_action( 'genesis_before_entry', 'blox_do_archive_thumbnails' );
-		remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 	} elseif ( is_search() ) {
-        remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
-        add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-        add_action( 'genesis_after_header', 'genesis_do_search_title', 2 );
-        add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-        add_action( 'genesis_before_entry', 'blox_do_archive_thumbnails' );
-    	remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
-    } elseif ( is_home() && ! is_front_page() ) {
-        add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-        add_action( 'genesis_after_header', 'blox_do_blog_title', 2 );
-        add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-        add_action( 'genesis_before_entry', 'blox_do_archive_thumbnails' );
-        remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
-    } elseif ( is_singular( 'post' ) ) {
-    	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-    	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-        add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-        add_action( 'genesis_after_header', 'blox_do_post_title', 2 );
-        add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-        add_action( 'genesis_entry_header', 'blox_do_post_thumbnail' );
-        remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
-    } elseif ( is_singular( 'download' ) ) {
-    	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-		add_action( 'genesis_after_header', 'blox_open_post_title', 1 );
-		add_action( 'genesis_after_header', 'blox_do_page_title', 2 );
-		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-    }
+    remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
+    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    add_action( 'genesis_after_header', 'genesis_do_search_title', 2 );
+    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+  } elseif ( is_home() && ! is_front_page() ) {
+    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    add_action( 'genesis_after_header', 'blox_do_blog_title', 2 );
+    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+  }
 }
+
+// Remove default post meta from footer
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+
+add_action( 'genesis_entry_header', 'blox_do_archive_thumbnails', 0);
+// Function for adding thumbnails to archive pages
+function blox_do_archive_thumbnails() {
+	if ( has_post_thumbnail() && ! is_singular() ) {
+		?>
+		<a class="archive-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'full' ); ?></a>
+		<?php
+	}
+}
+
 
 // Custom title opener
 function blox_open_post_title() {
@@ -150,8 +169,8 @@ function blox_do_page_title() {
 // Custom blog page title
 function blox_do_blog_title() {
 	?>
-	<h1 class="entry-title" itemprop="headline"><?php _e( 'The Blox Blog', 'blox-theme' ); ?></h1>
-	<p class="entry-subtitle"><?php _e( 'Release Notes & Tutorials', 'blox-theme' ); ?></p>
+	<h1 class="entry-title" itemprop="headline"><?php _e( 'Building with Blox', 'blox-theme' ); ?></h1>
+	<p class="entry-subtitle"><?php _e( 'Tutorials & Release Notes', 'blox-theme' ); ?></p>
 	<?php
 }
 
@@ -168,9 +187,9 @@ function blox_do_post_title() {
 	$author_archive_link = '<a href="' . get_author_posts_url ( $author_id ) . '">' . get_the_author_meta( 'display_name', $author_id ) . '</a>';
 
 	?>
-	<p class="title-categories"><?php echo implode( $category_array, ', ' );?></p>
+	<!--<p class="title-categories"><?php echo implode( $category_array, ', ' );?></p>-->
 	<h1 class="entry-title" itemprop="headline"><?php echo get_the_title(); ?></h1>
-	<p class="title-meta entry-meta"><?php echo do_shortcode( '[post_date] by ' . $author_archive_link . ' [post_comments] [post_edit]' );?></p>
+	<p class="title-meta"><?php echo do_shortcode( '[post_date] by ' . get_the_author_meta( 'display_name', $author_id ) . ' [post_edit]' );?></p>
 	<?php
 }
 
@@ -198,89 +217,41 @@ function blox_do_post_thumbnail() {
 	}
 }
 
-// Function for adding thumbnails to archive pages
-function blox_do_archive_thumbnails() {
-	if ( has_post_thumbnail() ) {
-		?>
-		<a class="archive-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'full' ); ?></a>
-		<?php
-	}
-}
 
 
-
-
+// Enable shortcodes in Author Boxes
+add_filter( 'genesis_author_box', 'do_shortcode' );
 
 // Enable shortcodes in text widgets
-add_filter('widget_text','do_shortcode');
-
-
-
-
+add_filter( 'widget_text','do_shortcode' );
 
 
 // Add related posts on blog posts
-add_action( 'genesis_after_entry', 'blox_single_related_posts', 1 );
-function blox_single_related_posts() {
+//add_action( 'genesis_after_entry', 'blox_related_posts', 1 );
+//* Display author box on single posts
+add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
 
-	if ( is_singular( 'post' ) ) {
 
-		$current_id = get_the_ID();
 
-		$categories = get_the_terms( $current_id, 'category' );
-		foreach ( $categories as $category ) {
-			$category_array[] = $category->term_id;
-		}
 
-		$related_query = new WP_Query( array(
-			'showposts'    => 2,
-			'orderby' 	   => 'rand',
-			'cat' 		   => implode( $category_array, ',' ),
-			'post__not_in' => array( $current_id )
-		) );
-
-		if ( $related_query->have_posts() ) {
-			?>
-			<section class="latest-posts columns columns-2 grid">
-				<div class="wrapper">
-				<?php while ($related_query->have_posts()) : $related_query->the_post(); ?>
-					<div class="item">
-						<div class="item-wrapper">
-							<a class="entry-image" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'full' ); ?></a>
-							<p class="entry-meta"><?php echo do_shortcode( '[post_date]' );?></p>
-							<h3 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
-							<p><?php echo get_excerpt( '150' ); ?></p>
-						</div>
-						<a class="readmore" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php _e( 'Read More', 'blox-theme' ); ?></a>
-					</div>
-				<?php endwhile; wp_reset_query(); ?>
-				</div>
-			</section>
-			<?php
-		}
+// Reposition the entry info (date, auther )
+add_action( 'genesis_before', 'blox_reposition_post_info' );
+function blox_reposition_post_info() {
+	if ( ! is_singular() ) {
+		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+		add_action( 'genesis_entry_header', 'genesis_post_info', 9 );
 	}
 }
 
-// Custom function that generates a shorter excerpt
-function get_excerpt( $characters, $excerpt = '' ){
-	if ( $excerpt == '' ) {
-		$excerpt = get_the_excerpt();
-	}
-	$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-	$excerpt = strip_shortcodes($excerpt);
-	$excerpt = strip_tags($excerpt);
-	$excerpt = substr( $excerpt, 0, $characters );
-	$excerpt = substr( $excerpt, 0, strripos( $excerpt, " ") );
-	$excerpt = trim( preg_replace( '/\s+/', ' ', $excerpt ) );
-	$excerpt = $excerpt . ' [...]';
-	return $excerpt;
+// Change the excerpt length
+add_filter( 'excerpt_length', 'blox_set_excerpt_length' );
+function blox_set_excerpt_length( $length ) {
+		return 20;
 }
 
-// Prevent Page Scroll When Clicking the More Link
-add_filter( 'the_content_more_link', 'remove_more_link_scroll' );
-function remove_more_link_scroll( $link ) {
-	$link = preg_replace( '|#more-[0-9]+|', '', $link );
-	return $link;
+add_filter( 'excerpt_more', 'blox_set_excerpt_more' );
+function blox_set_excerpt_more() {
+		return ' [...] <div><a class="button" href="' . get_permalink() . '">' . __( 'Continue Reading', 'blox-theme' ) . '</a></div>';
 }
 
 // Modify the WordPress read more link
@@ -292,13 +263,13 @@ function blox_read_more_link() {
 // Modify the size of the Gravatar in author box
 add_filter( 'genesis_author_box_gravatar_size', 'blox_author_box_gravatar_size' );
 function blox_author_box_gravatar_size( $size ) {
-	return 96;
+	return 120;
 }
 
 // Modify the size of the Gravatar in comments
 add_filter( 'genesis_comment_list_args', 'blox_comment_list_args' );
 function blox_comment_list_args( $args ) {
-    $args['avatar_size'] = 60;
+  $args['avatar_size'] = 60;
 	return $args;
 }
 
@@ -308,6 +279,16 @@ function blox_remove_comment_form_allowed_tags( $defaults ) {
 	$defaults['comment_notes_after'] = '';
 	return $defaults;
 }
+
+add_filter( 'comment_author_says_text', 'blox_remove_comment_author_says_text');
+function blox_remove_comment_author_says_text( $says_text ) {
+	return '';
+}
+
+// Register custom Account menu for account pages
+register_nav_menus( array(
+	'account_menu' => __( 'Account Navigation Menu', 'blox-theme' )
+) );
 
 // Add support for 4-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 4 );
@@ -360,16 +341,14 @@ function blox_custom_footer() {
 
 
 
-
 // Redirect logged-in users to members page if they try and visit the login page
 add_action( 'template_redirect', 'blox_redirect_login_to_members' );
 function blox_redirect_login_to_members() {
 
 	if ( is_page('login') && is_user_logged_in() && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
-
 		wp_redirect( '/your-account/', 301 );
-  		exit;
-    }
+		exit;
+  }
 }
 
 // Redirect un-logged-in users to login page is they try and visit the members page
@@ -377,85 +356,21 @@ add_action( 'template_redirect', 'blox_redirect_members_to_login' );
 function blox_redirect_members_to_login() {
 
 	if ( is_page('your-account') && ! is_user_logged_in() && $_SERVER['PHP_SELF'] != '/wp-admin/admin-ajax.php' ) {
-
 		wp_redirect( '/login/', 301 );
-  		exit;
-    }
+		exit;
+  }
 }
-
-
-// Register custom Account menu for account pages
-register_nav_menus( array(
-	'account_menu' => 'Account Navigation Menu'
-) );
-
-
-// EDD Functions
-
-add_action( 'edd_register_account_fields_before', 'blox_register_account_fields_before', 10 );
-function blox_register_account_fields_before() {
-	echo '<p class="blox-cart-description">Your account will give you instant access to all past purchases and all purchased files. License renewals and priority support are also handled through your personalized account.</p>';
-}
-add_action( 'edd_purchase_form_before_email', 'blox_purchase_form_before_email', 10 );
-function blox_purchase_form_before_email() {
-	echo '<p class="blox-cart-description">We need your first name, last name and email address so that we can send you a purchase receipt and downloadable files. Your information will never be shared with a third party.</p>';
-}
-add_action( 'edd_checkout_login_fields_before', 'blox_checkout_login_fields_before', 10 );
-function blox_checkout_login_fields_before() {
-	echo '<span><legend>Account Login</legend></span>';
-}
-
-add_action( 'edd_payment_mode_before_gateways', 'blox_payment_mode_before_gateways', 10 );
-function blox_payment_mode_before_gateways() {
-	echo '<p class="blox-cart-description">We currently support PayPal and Amazon Payments. All transactions are handled securely through them. We will never see your credit card information.</p>';
-}
-
-remove_action( 'edd_purchase_form_before_submit', 'edd_terms_agreement' );
-add_action( 'edd_purchase_form_before_submit', 'blox_terms_agreement' );
-function blox_terms_agreement() {
-	if ( edd_get_option( 'show_agree_to_terms', false ) ) {
-		$agree_text  = edd_get_option( 'agree_text', '' );
-		$agree_label = edd_get_option( 'agree_label', __( 'Agree to Terms?', 'easy-digital-downloads' ) );
-		?>
-		<fieldset id="edd_terms_agreement">
-			<span><legend>Terms of Use</legend></span>
-			<p class="blox-cart-description">You must check the box below to purchase Blox.</p>
-			<label for="edd_agree_to_terms">
-				<input name="edd_agree_to_terms" class="required" type="checkbox" id="edd_agree_to_terms" value="1"/>
-				By purchasing Blox, you agree to the <a href="https://www.bloxwp.com/terms-conditions/" title="Terms and Conditions" target="_blank">Terms &amp; Conditions</a> of use.
-			</label>
-		</fieldset>
-		<?php
-	}
-}
-
-remove_action( 'edd_cart_empty', 'edd_empty_checkout_cart' );
-add_action( 'edd_cart_empty', 'blox_empty_checkout_cart' );
-function blox_empty_checkout_cart() {
-	?>
-	<div style="text-align: center; max-width: 700px;margin: 0 auto;">
-		<h2>Oops... There's nothing in your cart!</h2>
-		<p>Head over to the pricing page to learn about the different licensing options for Blox.</p>
-		<a class="button" href="/pricing">View Pricing</a>
-
-		<p class="example-block warning" style="margin-top:50px;">Did you actually add a Blox license to your cart and it isn't showing up here? Try clearing your browser cache and then add a license to your cart again.</p>
-	</div>
-	<?php
-}
-
 
 function blox_main_styles() {
 	if ( SCRIPT_DEBUG || WP_DEBUG ) {
 		wp_register_style(
 			'blox_main_styles',
-			get_bloginfo( 'stylesheet_directory' ) . '/assets/css/style.css', '', '1.0', 'screen'
-		);
+			get_bloginfo( 'stylesheet_directory' ) . '/assets/css/style.css', '', '1.0', 'screen' );
 		wp_enqueue_style( 'blox_main_styles' );
 	} else {
 		wp_register_style(
 			'blox_main_styles',
-			get_bloginfo( 'stylesheet_directory' ) . '/assets/css/style-min.css', '', '1.0', 'screen'
-		);
+			get_bloginfo( 'stylesheet_directory' ) . '/assets/css/style-min.css', '', '1.0', 'screen' );
 		wp_enqueue_style( 'blox_main_styles' );
 	}
 }

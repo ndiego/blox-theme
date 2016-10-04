@@ -12,13 +12,13 @@ add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
 function blox_do_documentation_title() {
 
 	$categories = get_the_terms( get_the_ID(), 'documentation-type' );
-		
-	foreach ( $categories as $category ) { 
-		$category_array[] = '<a href="/documentation/#category_' . $category->slug . '">' . $category->name . '</a>'; 
+
+	foreach ( $categories as $category ) {
+		$category_array[] = '<a href="/documentation/#category_' . $category->slug . '">' . $category->name . '</a>';
 	}
 	?>
 	<div class="post-description">
-		<span class="title-categories"><?php echo implode( $category_array, ', ' );?></span>
+		<!--<span class="title-categories"><?php echo implode( $category_array, ', ' );?></span>-->
 		<h1 class="entry-title" itemprop="headline"><?php echo get_the_title(); ?></h1>
 	</div>
 	<?php
@@ -35,10 +35,7 @@ function blox_print_documentation_toc() {
 	<section class="widget documentation-toc">
 		<div class="widget-wrap">
 			<h4 class="widget-title widgettitle"><?php _e( 'Table of Contents', 'blox-theme' ); ?></h4>
-			<div class="eds-menu-container">
-				<ol class="menu">
-				</ol>
-			</div>
+			<ol class="menu"></ol>
 		</div>
 	</section>
 
@@ -54,11 +51,11 @@ add_action( 'genesis_sidebar', 'blox_print_selected_sidebar', 2 );
 function blox_print_selected_sidebar() {
 
 	$current_doc = get_the_title();
-	
+
 	$categories = get_the_terms( get_the_ID(), 'documentation-type' );
-	
+
 	foreach( $categories as $category ) {
-		
+
 		$args = array(
 			'post_type' => 'documentation',
 			'tax_query' => array(
@@ -68,13 +65,13 @@ function blox_print_selected_sidebar() {
 					'terms'    => $category->slug,
 				),
 			),
-			'orderby'   => 'menu_order', 
+			'orderby'   => 'menu_order',
 			'order'     => 'ASC',
 			'posts_per_page' => -1
 		);
-		
+
 		$docs = new WP_Query( $args );
-		
+
 		if ( ! empty ( $docs ) ) {
 			?>
 			<section id="documentation_type_<?php echo $category->slug; ?>" class="widget documentation-type">
@@ -94,7 +91,7 @@ function blox_print_selected_sidebar() {
 	<section class="widget documentation-type">
 		<div class="widget-wrap">
 			<div class="documentation-home">
-				<a class="button button-primary" href="/documentation"><?php _e( 'All Documentation', 'easy-docs' ); ?></a>
+				<a class="button button-secondary" href="/documentation"><?php _e( 'All Documentation', 'easy-docs' ); ?></a>
 			</div>
 		</div>
 	</section>

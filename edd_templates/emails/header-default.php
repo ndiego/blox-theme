@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // For gmail compatibility, including CSS styles in head/body are stripped out therefore styles need to be inline. These variables contain rules which are added to the template inline. !important; is a gmail hack to prevent styles being stripped if it doesn't like something.
 $body = "
-	background-color: #3DAEF1;
+	background-color: #f1f1f1;
 	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 ";
 $wrapper = "
@@ -22,30 +22,31 @@ $wrapper = "
 ";
 $template_container = "
 	background-color: #ffffff;
-	border: 1px solid #e9e9e9;
-	border-radius:3px !important;
-	padding: 20px;
 ";
 $template_header = "
-	color: #00000;
+	color: #2e2f33;
 	border-bottom: 0;
 	font-weight:bold;
 	line-height:100%;
 	text-align: center;
 	vertical-align:middle;
+	padding-top:10px;
+";
+$template_body = "
+padding-bottom:20px;
 ";
 $body_content = "
 	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 ";
 $body_content_inner = "
-	color: #000000;
+	color: #2e2f33;
 	font-size:14px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 	line-height:150%;
 	text-align:left;
 ";
 $header_content_h1 = "
-	color: #000000;
+	color: #2e2f33;
 	margin:0;
 	padding: 28px 24px 0;
 	display:block;
@@ -75,7 +76,7 @@ $heading    = EDD()->emails->get_heading();
 				<td align="center" valign="top">
 					<?php if( ! empty( $header_img ) ) : ?>
 						<div id="template_header_image">
-							<?php echo '<p style="margin-top:0;"><img src="' . esc_url( $header_img ) . '" alt="' . get_bloginfo( 'name' ) . '" /></p>'; ?>
+							<?php echo '<p style="margin-top:0;margin-bottom:20px"><img src="' . esc_url( $header_img ) . '" alt="' . get_bloginfo( 'name' ) . '" width="250"/></p>'; ?>
 						</div>
 					<?php endif; ?>
 					<table border="0" cellpadding="0" cellspacing="0" width="520" id="template_container" style="<?php echo $template_container; ?>">
@@ -97,7 +98,7 @@ $heading    = EDD()->emails->get_heading();
 						<tr>
 							<td align="center" valign="top">
 								<!-- Body -->
-								<table border="0" cellpadding="0" cellspacing="0" width="520" id="template_body">
+								<table border="0" cellpadding="0" cellspacing="0" width="520" id="template_body" style="<?php echo $template_body; ?>">
 									<tr>
 										<td valign="top" style="<?php echo $body_content; ?>">
 											<!-- Content -->

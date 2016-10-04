@@ -1,7 +1,7 @@
 .content {
 	float: left;
 	padding: 0 100px 50px 0;
-	width: 78%;
+	width: 76%;
 }
 
 .full-width-content .content {
@@ -16,11 +16,26 @@
 	float: right;
 	font-size: 16px;
 	margin-bottom: 0;
-	width: 22%;
+	width: 24%;
 
   li {
     margin-bottom: 5px;
+		a {
+			color: $text-color;
+
+			&:hover {
+				color: $secondary-color;
+			}
+		}
   }
+
+	// Correct for overriding styles
+	li.current_menu_item {
+		a {
+			color: $secondary-color;
+		}
+	}
+
   ul > li:last-child {
   	margin-bottom: 0;
   }

@@ -7,15 +7,6 @@
     display: block;
 }
 
-.latest-posts p.entry-meta {
-    font-size: 14px;
-    margin-bottom: 10px;
-}
-
-.latest-posts .entry-time::before {
-	font: normal 16px/1 'dashicons';
-	margin-right: 5px;
-}
 
 @include media("screen", "<=tablet") {
   .latest-posts .item {

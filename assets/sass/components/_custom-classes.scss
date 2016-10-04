@@ -27,8 +27,9 @@
 
 
 .example-block {
-	background-color: #eeeeee;
-    margin-bottom: 30px;
+	border: 1px solid #ececec;
+	border-left: 3px solid $accent-color-green;
+  margin-bottom: 30px;
 	padding: 25px;
 }
 .example-block p:last-child {
@@ -36,11 +37,11 @@
 }
 
 .example-block.warning {
-	background-color: #FFFBC3;
+	border-left: 3px solid $accent-color-red;
 }
 
 .example-block.highlight {
-	background-color: #C4E9FF;
+	border-left: 3px solid $accent-color-yellow;
 }
 
 
@@ -51,7 +52,6 @@
     text-align: center;
 }
 
-
 .screenshot {
 	width: 90%;
 	border: 10px solid #f1f1f1;
@@ -61,4 +61,10 @@
   .screenshot {
     width: 100%;
   }
+}
+
+// Twitter Follow shortcode styles
+.twitter-follow {
+	display: inline-block;
+	margin-top: 15px;
 }

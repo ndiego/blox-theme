@@ -1,15 +1,62 @@
-.archive-description p {
-	font-size: 24px;
-	margin-bottom: 0;
-}
-
-.archive-description p:last-child {
-	margin-bottom: 0;
+.archive .content {
+	max-width: 1000px;
 }
 
 .archive .content .entry {
 	margin-bottom: 80px;
 }
+
+.archive .site-inner {
+	background-color: $background-color;
+	padding: 100px 0 0;
+}
+
+.archive {
+	.content {
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		-webkit-justify-content: space-between;
+		flex-flow: row wrap;
+		justify-content: space-between;
+	}
+
+	.content article {
+		background-color: #fff;
+		width: 47%;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-flow: column;
+	}
+
+	.entry-header {
+		padding: 40px 30px 0;
+	}
+	.entry-content {
+		padding: 0 30px 40px;
+	}
+}
+
+.archive .content .entry {
+	margin-bottom: 80px;
+}
+
+@include media("screen", "<=tablet") {
+  .archive .content .entry {
+    margin-bottom: 40px;
+  }
+}
+
+
+
+.archive .more-link:hover {
+	background-color: #3daef1;
+	color: #fff;
+}
+
+
 
 @include media("screen", "<=tablet") {
   .archive .content .entry {

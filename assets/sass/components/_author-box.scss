@@ -1,21 +1,38 @@
 .author-box {
 	background-color: #fff;
-	padding: 50px 50px;
-	border-bottom: 3px solid #d9d9d9;
+	padding: 40px 50px;
+	border-top: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
 	margin-bottom: 80px;
-}
 
-.author-box-title {
-	font-size: 20px;
-	margin-bottom: 16px;
-}
-
-.author-box p:last-child {
-	margin-bottom: 0;
-}
-
-@include media("screen", "<=tablet") {
-  .author-box {
+	@include media("screen", "<=tablet") {
+		padding: 40px 0;
     margin-bottom: 40px;
-  }
+	}
+
+	@include media("screen","<=phone"){
+		text-align: center;
+	}
+
+	.avatar {
+		margin-right: 30px;
+
+		@include media("screen","<=phone"){
+			float:none;
+			margin: 0 0 15px;
+		}
+	}
+
+	.author-box-title {
+		font-family: $font-medium;
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+
+	p {
+		overflow: hidden;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
