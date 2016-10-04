@@ -98,7 +98,6 @@
   	position: absolute;
   	width: 170px;
   	z-index: 99;
-    @include transition(0.4s);
 
     @include media("screen", "<=desktop") {
       left: 0;

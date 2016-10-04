@@ -181,15 +181,23 @@
 
 
 /* Profile Editor */
-#edd_profile_editor_form fieldset {
-	border: none;
-	padding: 0;
-	margin: 0;
-}
-#edd_profile_editor_form label {
-	display: block;
-    font-weight: 400;
-    margin: 10px 0 5px;
+#edd_profile_editor_form {
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	legend {
+		margin: 40px 0 20px;
+		&:first-child {
+			margin-top:0;
+		}
+	}
+
+	label {
+	    margin: 15px 0 5px;
+	}
 }
 
 /* Purchase Receipt */

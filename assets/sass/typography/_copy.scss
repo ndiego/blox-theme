@@ -61,6 +61,7 @@ li {
 
 b,
 strong {
+	color: $primary-color;
 	font-family: $font-medium;
 }
 
@@ -103,6 +104,7 @@ fieldset {
 }
 
 legend {
+	color: $primary-color;
 	font-family: $font-heavy;
   font-size: 24px;
   line-height: 1.2;
@@ -116,7 +118,7 @@ label {
 	margin-bottom: 5px;
 }
 
-.required {
+span.required {
 	color: $accent-color-red;
 }
 

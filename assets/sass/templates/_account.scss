@@ -3,21 +3,23 @@
 
 .blox-account .content {
 	padding-top: 40px;
+	max-width: 1000px;
 }
-.menu-account-nav-menu-container {
-	border-bottom: 3px solid #f1f1f1;
+.account-menu {
+	border-bottom: 1px solid #ececec;
 	font-size: 18px;
-	margin-top: 50px;
 }
 .account-menu .menu-item {
     display: inline-block;
     text-align: left;
 }
 .account-menu li a {
-	color: #162938;
+	color: $primary-color;
+	font-family: $font-medium;
+	letter-spacing: 1px;
 	display: block;
-    position: relative;
-    padding: 10px 20px 10px;
+  position: relative;
+  padding: 0 20px 15px;
 }
 .account-menu li a:hover,
 .account-menu li.current-menu-item a {

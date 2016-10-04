@@ -322,6 +322,7 @@ li {
 
 b,
 strong {
+  color: #162938;
   font-family: "AvenirLTStd-Medium", sans-serif; }
 
 blockquote,
@@ -357,6 +358,7 @@ fieldset {
   padding: 0; }
 
 legend {
+  color: #162938;
   font-family: "AvenirLTStd-Heavy", sans-serif;
   font-size: 24px;
   line-height: 1.2;
@@ -368,7 +370,7 @@ label {
   font-family: "AvenirLTStd-Medium", sans-serif;
   margin-bottom: 5px; }
 
-.required {
+span.required {
   color: #ff5545; }
 
 .dashicons {
@@ -680,8 +682,8 @@ th {
   word-break: break-word; }
 
 th {
-  font-weight: 400;
-  background-color: #f1f1f1; }
+  background-color: #f0f8ff;
+  color: #162938; }
 
 .widget {
   margin-bottom: 50px;
@@ -854,12 +856,7 @@ th {
     padding: 10px;
     position: absolute;
     width: 170px;
-    z-index: 99;
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -ms-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; }
+    z-index: 99; }
 
 @media screen and (max-width: 1024px) {
   .nav-primary .sub-menu {
@@ -1293,12 +1290,12 @@ p.entry-meta {
 /* Account
 --------------------------------------------- */
 .blox-account .content {
-  padding-top: 40px; }
+  padding-top: 40px;
+  max-width: 1000px; }
 
-.menu-account-nav-menu-container {
-  border-bottom: 3px solid #f1f1f1;
-  font-size: 18px;
-  margin-top: 50px; }
+.account-menu {
+  border-bottom: 1px solid #ececec;
+  font-size: 18px; }
 
 .account-menu .menu-item {
   display: inline-block;
@@ -1306,9 +1303,11 @@ p.entry-meta {
 
 .account-menu li a {
   color: #162938;
+  font-family: "AvenirLTStd-Medium", sans-serif;
+  letter-spacing: 1px;
   display: block;
   position: relative;
-  padding: 10px 20px 10px; }
+  padding: 0 20px 15px; }
 
 .account-menu li a:hover,
 .account-menu li.current-menu-item a {
@@ -2567,10 +2566,13 @@ Flex Box
   padding: 0;
   margin: 0; }
 
+#edd_profile_editor_form legend {
+  margin: 40px 0 20px; }
+  #edd_profile_editor_form legend:first-child {
+    margin-top: 0; }
+
 #edd_profile_editor_form label {
-  display: block;
-  font-weight: 400;
-  margin: 10px 0 5px; }
+  margin: 15px 0 5px; }
 
 /* Purchase Receipt */
 .edd_sl_license_key_expired,
