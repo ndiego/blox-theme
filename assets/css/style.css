@@ -1602,6 +1602,7 @@ p.entry-meta {
   .home-widgets .cta .text h4 {
     color: #fff;
     font-size: 30px;
+    line-height: 1.1;
     margin: 0 0 7px; }
   .home-widgets .cta .text p {
     color: #B8E3F5;
@@ -2060,13 +2061,15 @@ p.entry-meta {
     .pricing-table .one-third:nth-child(2) .price-heading {
       background-color: #162938;
       color: #ffffff; }
+      .pricing-table .one-third:nth-child(2) .price-heading h4 {
+        color: #ffffff; }
     .pricing-table .one-third:nth-child(3n+1) {
       clear: both;
       margin: 20px 0 20px 2.564102564102564%; }
     .pricing-table .one-third:nth-child(3n+3) {
       margin: 20px 2.564102564102564% 20px 0; }
   .pricing-table .price-heading {
-    background-color: #f1f1f1;
+    background-color: #f0f8ff;
     border-bottom: 2px solid #162938;
     margin: -40px -40px 40px;
     padding: 40px; }
@@ -2090,12 +2093,12 @@ p.entry-meta {
     margin-bottom: 30px !important;
     margin-left: 0 !important; }
   .pricing-table li {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #ececec;
     margin-bottom: 10px;
     padding-bottom: 10px;
     list-style-type: none !important; }
     .pricing-table li::before {
-      color: #9bc23c;
+      color: #83c77e;
       content: '\2713';
       display: inline-block;
       font-family: "icon-font";
@@ -2110,9 +2113,9 @@ p.entry-meta {
       text-decoration: inherit;
       text-transform: none;
       width: 1em; }
-    .pricing-table li .not-included::before {
+    .pricing-table li.not-included::before {
       content: '\2715';
-      color: #ff0000; }
+      color: #ff5545; }
 
 @media screen and (max-width: 782px) {
   .pricing-table .one-third,
@@ -2366,6 +2369,67 @@ Flex Box
 .twitter-follow {
   display: inline-block;
   margin-top: 15px; }
+
+.blox-cta .blox-image-wrap.blox-image-background {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.blox-cta .blox-caption-container {
+  display: table;
+  top: 0;
+  height: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center; }
+
+.blox-cta .blox-caption-wrap {
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle; }
+
+.blox-cta h2 {
+  color: #fff;
+  font-family: "AvenirLTStd-Medium", sans-serif;
+  font-size: 40px;
+  width: 65%;
+  margin: 0 auto 30px; }
+
+@media screen and (max-width: 1024px) {
+  .blox-cta h2 {
+    font-size: 36px; } }
+
+@media screen and (max-width: 782px) {
+  .blox-cta h2 {
+    font-size: 30px; } }
+
+.blox-cta .button {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 20px 25px; }
+
+@media screen and (max-width: 782px) {
+  .blox-cta .button {
+    font-size: 18px;
+    padding: 18px 20px; } }
+
+.blox-container {
+  position: relative; }
+  .blox-container::after {
+    content: "Built with Blox – Global Block";
+    color: #fff;
+    opacity: .3;
+    bottom: 8px;
+    font-size: 12px;
+    left: 10px;
+    position: absolute; }
 
 .simple-share-icons {
   text-align: center; }

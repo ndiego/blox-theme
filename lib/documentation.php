@@ -20,10 +20,10 @@ add_action( 'edit_term', 'add_edit_term_group' );
 
 add_action( 'quick_edit_custom_box', 'quick_edit_term_group', 10, 3 );
 
-	
-add_action( 'init', 'blox_register_documentation_post_type' );	
+
+add_action( 'init', 'blox_register_documentation_post_type' );
 function blox_register_documentation_post_type() {
-	
+
 	$labels = array(
 		'name'               => __( 'Documentation', 'blox' ),
 		'singular_name'      => __( 'Doc', 'blox' ),
@@ -46,24 +46,24 @@ function blox_register_documentation_post_type() {
 		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'query_var'           => true,
-		'show_ui'			  => true,
+		'show_ui'			  	    => true,
 		'show_in_admin_bar'   => true,
 		'rewrite'             => array( 'slug' => 'documentation' ),
 		'menu_position'       => 20,
 		'menu_icon'           => 'dashicons-book-alt',
-		'has_archive'		  => true,
-		'hierarchical'		  => true,
-		'supports'     		  => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes', 'genesis-seo' ),
+		'has_archive'		 		  => true,
+		'hierarchical'		    => true,
+		'supports'     		    => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes', 'genesis-seo' ),
 		//'taxonomies'		  => array( 'blox_category' )
 	);
 
 	// Register the easy_docs post type
-	register_post_type( 'documentation', $args ); 
+	register_post_type( 'documentation', $args );
 }
 
-add_action( 'init', 'blox_register_documentation_categories' );		
+add_action( 'init', 'blox_register_documentation_categories' );
 function blox_register_documentation_categories() {
-	
+
 	$labels = array(
 		'name'                       => __( 'Categories' ),
 		'singular_name'              => __( 'Category' ),
@@ -93,12 +93,12 @@ function blox_register_documentation_categories() {
 		'has_archive'           => false,
 		'rewrite'               => array( 'slug' => 'documentation-type' ),
 	);
-	
+
 	// Register category taxonomy
 	register_taxonomy( 'documentation-type', 'documentation', $args );
 }
-	
-	
+
+
 function blox_archive_template( $archive_template ) {
 	 global $post;
 
@@ -124,12 +124,12 @@ function blox_single_template( $single_template ) {
 
 
 function add_docs_column_header( $columns ) {
-	
+
 	$new_columns = array();
-	
+
 	// Specify where we want to put our column
 	foreach( $columns as $key => $title ) {
-		if ( $key=='date' ) { 
+		if ( $key=='date' ) {
 			$new_columns['menu_order'] = __( 'Order', 'blox-theme' );
 		}
 		$new_columns[$key] = $title;
@@ -152,47 +152,47 @@ function add_docs_column_value( $column_name, $post_ID ) {
 
 
 function add_column_header( $columns ) {
-	
+
 	$columns['term_group'] = __( 'Order', 'blox-theme' );
 	return $columns;
 }
 
 function add_column_value( $empty = '', $column, $term_id ) {
-	
+
 	$term = get_term( $term_id, 'documentation-type' );
-	
+
 	// Here $column is equal to term_group
 	return $term->$column;
 }
 
 
 function add_edit_term_group( $term_id ) {
-	
+
 	global $wpdb;
-	
+
 	if ( isset($_POST['term_group_order'] ) ) {
-		
+
 		$wpdb->update( $wpdb->terms, array( 'term_group' => $_POST['term_group_order'] ), array( 'term_id' => $term_id ) );
 	}
 }
 
 function term_group_add_form_field() {
-	
+
 	$form_field = '<div class="form-field"><label for="term_group_order">' . __( 'Order', 'blox-theme' ) . '</label><input name="term_group_order" id="term_group_order" type="text" value="0" style="width:5em" /><p>' . __( 'Choose the category order. This is the order in which the categories will be displayed on the frontend.', 'blox-theme' ) . '</p></div>';
-	
+
 	echo $form_field;
 }
 
 function term_group_edit_form_field( $term ) {
-	
+
 	$form_field = '<tr class="form-field"><th scope="row" valign="top"><label for="term_group_order">' . __( 'Order', 'blox-theme' )  . '</label></th><td><input name="term_group_order" id="term_group_order" type="text" value="' . $term->term_group . '" style="width:5em" /><p class="description">' . __( 'Choose the category order. This is the order in which the categories will be displayed on the frontend.', 'blox-theme' ) .'</p></td></tr>';
-	
+
 	echo $form_field;
 }
 
 function quick_edit_term_group() {
-	
-	$term_group_field = '<fieldset><div class="inline-edit-col"><label><span class="title">' . __( 'Order', 'blox-theme' ) . '</span><span class="input-text-wrap"><input class="ptitle" name="term_group_order" type="text" value="" /></span></label></div></fieldset>';		
+
+	$term_group_field = '<fieldset><div class="inline-edit-col"><label><span class="title">' . __( 'Order', 'blox-theme' ) . '</span><span class="input-text-wrap"><input class="ptitle" name="term_group_order" type="text" value="" /></span></label></div></fieldset>';
 	echo $term_group_field;
 }
 
@@ -201,24 +201,24 @@ function quick_edit_term_group() {
 
 
 
-	
+
 add_action( 'wp_enqueue_scripts', 'blox_documentation_scripts' );
 /**
  * Loads scripts for documentation pages
  *
  */
 function blox_documentation_scripts() {
-	
+
 	if ( is_tax( 'documentation-type' ) || get_post_type() == 'documentation' ){
-		
+
 		// Ajax stuff for the search form
 		wp_enqueue_script( 'ajax-search', get_bloginfo( 'stylesheet_directory' ) . '/js/documentation/ajax-search.js', array( 'jquery' ), '1.0.0', true );
 		wp_localize_script( 'ajax-search', 'SearchDocumentation', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
-		
+
 	}
-	
+
 	if ( is_singular() && get_post_type() == 'documentation' ){
-	
+
 		wp_enqueue_script( 'single-frontend-scripts', get_bloginfo( 'stylesheet_directory' ) . '/js/documentation/single.js', array( 'jquery' ), '1.0.0', true );
 	}
 }
@@ -230,6 +230,11 @@ add_action( 'wp_ajax_nopriv_blox_load_search_results', 'blox_load_search_results
  *
  */
 function blox_load_search_results() {
+
+	// Modify the excerpts for search
+	add_filter( 'excerpt_length', 'blox_set_search_excerpt_length' );
+	add_filter( 'excerpt_more', 'blox_set_search_excerpt_more' );
+	
 	$query = $_POST['query'];
 
 	$args = array(
@@ -247,7 +252,7 @@ function blox_load_search_results() {
 		<?php
 		if ( $search->have_posts() ) {
 			while ( $search->have_posts() ) : $search->the_post();
-		
+
 				$categories = get_the_terms( get_the_ID(), 'documentation-type' );
 				if ( $categories && ! is_wp_error( $categories ) ) {
 					$category_array = array();
@@ -256,9 +261,9 @@ function blox_load_search_results() {
 					}
 					$category_string = join( ", ", $category_array);
 				}
-			
+
 				?>
-				<article class="search-result"> 			
+				<article class="search-result">
 					<h4>
 						<?php echo $category_string; ?> <span class="dashicons dashicons-arrow-right-alt2"></span>
 						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
@@ -281,7 +286,7 @@ function blox_load_search_results() {
 
 	echo $content;
 	die();
-	
+
 }
 
 add_filter( 'genesis_search_form', 'blox_modify_documentation_search_form', 10, 3 );
@@ -296,8 +301,8 @@ add_filter( 'genesis_search_form', 'blox_modify_documentation_search_form', 10, 
 function blox_modify_documentation_search_form( $form, $search_text, $button_text ) {
 	if ( ! ( is_post_type_archive( 'documentation' ) || is_singular( 'documentation' ) ) ) {
 		return $form;
-	}	
-	
+	}
+
 	$search_text = __( 'Search Documentation...', 'blox-theme' );
 	$docs_form = '
 	<div id="search_container">
@@ -308,12 +313,12 @@ function blox_modify_documentation_search_form( $form, $search_text, $button_tex
 		</form>
 	</div>
 	';
-	
+
 	return $docs_form;
 }
 
-add_action( 'genesis_after_header', 'blox_print_search_results_container' );  
-/** 
+add_action( 'genesis_after_header', 'blox_print_search_results_container' );
+/**
  * Add search result div
  *
  * @since 1.0.0
@@ -322,8 +327,4 @@ function blox_print_search_results_container() {
 	if ( is_post_type_archive( 'documentation' ) || is_singular( 'documentation' ) ) {
 		echo '<div id="search_results"></div>';
 	}
-}	
-
-
-
-
+}

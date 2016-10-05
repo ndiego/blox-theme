@@ -68,3 +68,70 @@
 	display: inline-block;
 	margin-top: 15px;
 }
+
+.blox-cta {
+	.blox-image-wrap.blox-image-background {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 450px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.blox-caption-container {
+		display: table;
+		top:0;
+		height: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.blox-caption-wrap {
+		background-color: transparent;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	h2 {
+		color: #fff;
+		font-family: $font-medium;
+		font-size: 40px;
+		width: 65%;
+		margin: 0 auto 30px;
+		@include media("screen", "<=desktop") {
+			font-size: 36px
+		}
+		@include media("screen", "<=tablet") {
+			font-size: 30px
+		}
+	}
+
+	.button {
+		font-size: 20px;
+		margin-bottom: 15px;
+		padding: 20px 25px;
+		@include media("screen", "<=tablet") {
+			font-size: 18px;
+			padding: 18px 20px;
+		}
+	}
+}
+
+.blox-container {
+	position: relative;
+	&::after {
+		content: "Built with Blox – Global Block";
+		color: #fff;
+		opacity: .3;
+		bottom:8px;
+		font-size: 12px;
+		left: 10px;
+		position: absolute;
+	}
+}

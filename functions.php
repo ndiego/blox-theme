@@ -130,7 +130,7 @@ remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 add_action( 'genesis_entry_header', 'blox_do_archive_thumbnails', 0);
 // Function for adding thumbnails to archive pages
 function blox_do_archive_thumbnails() {
-	if ( has_post_thumbnail() && ! is_singular() ) {
+	if ( has_post_thumbnail() && ! is_singular() && ! is_search() ) {
 		?>
 		<a class="archive-thumbnail" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail( 'full' ); ?></a>
 		<?php
@@ -248,10 +248,18 @@ add_filter( 'excerpt_length', 'blox_set_excerpt_length' );
 function blox_set_excerpt_length( $length ) {
 		return 20;
 }
+// Custom excerpt length for ajax search results
+function blox_set_search_excerpt_length( $length ) {
+		return 60;
+}
 
 add_filter( 'excerpt_more', 'blox_set_excerpt_more' );
 function blox_set_excerpt_more() {
 		return ' [...] <div><a class="button" href="' . get_permalink() . '">' . __( 'Continue Reading', 'blox-theme' ) . '</a></div>';
+}
+// Custom excerpt more link for ajax search results
+function blox_set_search_excerpt_more() {
+		return ' [...]';
 }
 
 // Modify the WordPress read more link

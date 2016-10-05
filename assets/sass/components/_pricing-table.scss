@@ -12,7 +12,11 @@
     &:nth-child(2) {
       .price-heading {
         background-color: $primary-color;
-        color: #ffffff
+        color: #ffffff;
+
+				h4 {
+					color: #ffffff;
+				}
       }
     }
 
@@ -26,7 +30,7 @@
   }
 
   .price-heading {
-    background-color: #f1f1f1;
+    background-color: $background-color;
   	border-bottom: 2px solid $primary-color;
   	margin: -40px -40px 40px;
   	padding: 40px;
@@ -64,13 +68,13 @@
   }
 
   li {
-  	border-bottom: 1px solid #e5e5e5;
+  	border-bottom: 1px solid #ececec;
   	margin-bottom: 10px;
   	padding-bottom: 10px;
     list-style-type: none !important;
 
     &::before {
-      color: #9bc23c;
+      color: $accent-color-green;
       content: '\2713';
       display: inline-block;
       font-family: "icon-font";
@@ -87,9 +91,9 @@
       width: 1em;
     }
 
-    .not-included::before {
+    &.not-included::before {
       content: '\2715';
-      color: #ff0000;
+      color: $accent-color-red;
     }
   }
 }
