@@ -5,13 +5,13 @@
 
   .one-third {
   	background-color: #fff;
-  	border: 2px solid #000;
+  	border: 2px solid $primary-color;
   	margin: 0 -2px;
   	padding: 40px;
 
     &:nth-child(2) {
       .price-heading {
-        background-color: $primary-color;
+        background-color: $secondary-color;
         color: #ffffff;
 
 				h4 {
@@ -63,6 +63,7 @@
   }
 
   ul {
+		color: $text-color;
     margin-bottom: 30px !important;
     margin-left: 0 !important;
   }

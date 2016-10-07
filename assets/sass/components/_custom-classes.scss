@@ -134,4 +134,7 @@
 		left: 10px;
 		position: absolute;
 	}
+	&.blox-scope-local::after {
+		content: "Built with Blox – Local Block";
+	}
 }

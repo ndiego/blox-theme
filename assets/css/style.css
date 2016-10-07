@@ -1975,6 +1975,48 @@ p.entry-meta {
   .single-post article .wp-post-image {
     display: none; } }
 
+.blox-pricing .site-title a {
+  color: #fff; }
+  .blox-pricing .site-title a:hover {
+    color: #162938; }
+
+.blox-pricing .nav-primary a {
+  color: #fff; }
+  .blox-pricing .nav-primary a:hover {
+    color: #162938; }
+
+.blox-pricing .nav-primary .sub-menu a {
+  color: #fff; }
+  .blox-pricing .nav-primary .sub-menu a:hover {
+    color: #3daef1; }
+
+.blox-pricing .nav-primary .get-blox a {
+  background-color: #3daef1; }
+  .blox-pricing .nav-primary .get-blox a:hover {
+    color: #162938;
+    background-color: #fff; }
+
+.blox-pricing .page-title {
+  background-color: #162938; }
+  .blox-pricing .page-title h1 {
+    color: #fff; }
+
+.blox-pricing .content {
+  max-width: 1000px;
+  padding-top: 80px; }
+
+.blox-pricing-table {
+  background-color: #162938;
+  padding-bottom: 80px; }
+  .blox-pricing-table .pricing-table {
+    margin: 0 auto;
+    max-width: 1000px; }
+  .blox-pricing-table .pricing-subtext {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 0;
+    text-align: center; }
+
 /*--------------------------------------------------------------
 ## Avatar
 --------------------------------------------------------------*/
@@ -2055,11 +2097,11 @@ p.entry-meta {
   text-align: center; }
   .pricing-table .one-third {
     background-color: #fff;
-    border: 2px solid #000;
+    border: 2px solid #162938;
     margin: 0 -2px;
     padding: 40px; }
     .pricing-table .one-third:nth-child(2) .price-heading {
-      background-color: #162938;
+      background-color: #3daef1;
       color: #ffffff; }
       .pricing-table .one-third:nth-child(2) .price-heading h4 {
         color: #ffffff; }
@@ -2090,6 +2132,7 @@ p.entry-meta {
     letter-spacing: 2px;
     font-weight: 700; }
   .pricing-table ul {
+    color: #556977;
     margin-bottom: 30px !important;
     margin-left: 0 !important; }
   .pricing-table li {
@@ -2430,24 +2473,8 @@ Flex Box
     font-size: 12px;
     left: 10px;
     position: absolute; }
-
-.simple-share-icons {
-  text-align: center; }
-  .simple-share-icons a {
-    vertical-align: middle;
-    display: inline-block;
-    border-radius: 100%;
-    margin: 5px;
-    padding: 14px;
-    background-color: #162938;
-    transition: all .1s ease-in;
-    line-height: 0; }
-    .simple-share-icons a:hover {
-      background-color: #3daef1; }
-  .simple-share-icons svg {
-    fill: #fff;
-    width: 24px;
-    height: 24px; }
+  .blox-container.blox-scope-local::after {
+    content: "Built with Blox – Local Block"; }
 
 /* Easy Digital Downloads
 --------------------------------------------- */

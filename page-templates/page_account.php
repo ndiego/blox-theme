@@ -30,23 +30,23 @@ remove_action( 'genesis_after_header', 'genesis_do_nav' );
 // Add account navigation back
 add_action( 'genesis_before_content', 'blox_account_menu' );
 function blox_account_menu() {
-	wp_nav_menu( array( 
-		'menu' => 'acccount_menu', 
-		'container' => 'div', 
-		'container_class' => '', 
-		'container_id' => '', 
-		'menu_class' => 'menu account-menu', 
+	wp_nav_menu( array(
+		'menu' => 'acccount_menu',
+		'container' => 'div',
+		'container_class' => '',
+		'container_id' => '',
+		'menu_class' => 'menu account-menu',
 		'menu_id' => '',
-    	'echo' => true, 
-    	'fallback_cb' => 'wp_page_menu', 
-    	'before' => '', 
-    	'after' => '', 
-    	'link_before' => '', 
-    	'link_after' => '', 
+    	'echo' => true,
+    	'fallback_cb' => 'wp_page_menu',
+    	'before' => '',
+    	'after' => '',
+    	'link_before' => '',
+    	'link_after' => '',
     	'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-    	'depth' => 0, 
-    	'walker' => '', 
-    	'theme_location' => 'account_menu' 
+    	'depth' => 0,
+    	'walker' => '',
+    	'theme_location' => 'account_menu'
     ) );
 }
 
@@ -78,8 +78,8 @@ function blox_conditional_content() {
 function blox_login_error() {
 	?>
 	<div style="text-align=center">
-		<h3><?php _e( 'Oops, it looks like you are not logged in...', 'blox-theme' );?></h3> 
-		<p>You need to be a Blox customer to access this content. Already a Blox user? <a href="<?php echo site_url('login');?>">Login here</a>.</p> 
+		<h3><?php _e( 'Oops, it looks like you are not logged in...', 'blox-theme' );?></h3>
+		<p>You need to be a Blox customer to access this content. Already a Blox user? <a href="<?php echo site_url('login');?>">Login here</a>.</p>
 	</div>
 	<?php
 }

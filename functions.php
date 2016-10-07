@@ -9,8 +9,6 @@ include_once( get_stylesheet_directory() . '/lib/documentation.php' );
 include_once( get_stylesheet_directory() . '/lib/shortcodes.php' );
 include_once( get_stylesheet_directory() . '/lib/edd.php' );
 
-include_once( get_stylesheet_directory() . '/lib/simple-share-icons.php' );
-
 include_once( get_stylesheet_directory() . '/lib/related-posts.php' );
 
 // Set Localization (do not remove)
