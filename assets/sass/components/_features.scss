@@ -1,3 +1,109 @@
+.blox-features {
+	background-color: $background-color;
+	padding: 80px 0;
+	margin-bottom: 70px;
+
+	.blox-wrap{
+		max-width: 1000px;
+		margin: 0 auto;
+
+		@include media("screen", "<=desktop"){
+			padding: 0 5%;
+		}
+	}
+	.feature {
+		clear: both;
+		overflow: hidden;
+		margin-bottom: 60px;
+
+		.feature-image {
+			width: 35%;
+			padding-bottom: 35%;
+			border: 1px solid #ececec;
+			float: right;
+			border-radius: 100%;
+			overflow: hidden;
+			position: relative;
+
+			a {
+				position: absolute;
+			}
+			img {
+				margin-bottom: 0;
+				max-width: 160%;
+			}
+
+			@include media("screen", "<=tablet"){
+				width: 50%;
+				padding-bottom: 50%;
+				float: none;
+				margin: 0 auto 40px;
+			}
+			@include media("screen", "<=phone"){
+				width: 80%;
+				padding-bottom: 80%;
+			}
+		}
+		.feature-content {
+			width: 65%;
+			float: left;
+			padding: 60px 100px 60px 40px;
+
+			@include media("screen", "<=desktop"){
+				padding: 20px 80px 60px 0;
+			}
+
+			@include media("screen", "<=tablet"){
+				float: none;
+				padding: 0;
+				width: 100%;
+			}
+		}
+
+		&:nth-child(even) {
+			.feature-image {
+				float: left;
+
+				@include media("screen", "<=tablet"){
+					width: 50%;
+					padding-bottom: 50%;
+					float: none;
+					margin: 0 auto 40px;
+				}
+				@include media("screen", "<=phone"){
+					width: 80%;
+					padding-bottom: 80%;
+				}
+			}
+			.feature-content {
+				float: right;
+				padding: 60px 40px 60px 100px;
+
+				@include media("screen", "<=desktop"){
+					padding: 20px 0 60px 80px;
+				}
+
+				@include media("screen", "<=tablet"){
+					float: none;
+					padding: 0;
+					width: 100%;
+				}
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&:after {
+		color: $text-color !important;
+	}
+}
+
+
+
+
 .features-container {
 	overflow: hidden;
 }
@@ -25,11 +131,11 @@
 		font-size: 17px;
 	}
 	.dashicons {
-    font-size: 28px;
-    height: 0;
-    width: 20px;
-    display: inline-block;
-    margin-right: 20px;
+	    font-size: 28px;
+	    height: 0;
+	    width: 20px;
+	    display: inline-block;
+	    margin-right: 20px;
 	}
 
 	&:nth-child(odd) {
@@ -102,6 +208,7 @@
     width: 20px;
     display: inline-block;
     margin-right: 20px;
+	line-height: 1.1;
 }
 .features .one-half {
 	padding: 0 30px 15px;

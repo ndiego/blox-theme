@@ -1,25 +1,77 @@
 
-.blox-addons .site-inner {
-	background-color: #f1f1f1;
+.blox-addons {
+	.site-inner {
+		background-color: $background-color;
+		padding: 100px 0 60px;
+
+		@include media("screen", "<=tablet"){
+			padding-bottom: 0;
+		}
+	}
+
+	.content {
+		max-width: 1000px
+	}
+}
+.addon-list {
+	.item {
+		background-color: #fff;
+		p {
+			margin-bottom: 20px;
+		}
+
+		@include media("screen", "<=tablet"){
+			margin-bottom: 40px;
+		}
+	}
+	a.entry-image {
+		line-height: 0;
+	    display: block;
+	}
+	.entry-header {
+		padding: 40px 30px 0;
+	}
+	.entry-content {
+		padding: 0 30px 40px;
+	}
 }
 
-.addon-list .item {
-	background-color: #fff;
-	margin-bottom: 80px;
-	padding: 50px 50px 40px;
-	border-bottom: 3px solid #dbdbdb;
-}
-.addon-list a.entry-image {
-	line-height: 0;
-	margin: -50px -50px 10px;
-    display: block;
-}
-.addon-list .item p {
-	margin-bottom: 20px;
-}
+.addon-idea {
+	background-color: $primary-color !important;
+	position: relative;
+	text-align: center;
 
-.blox-addons .content .wp-post-image {
-    margin-bottom: 30px;
+	.addon-idea-wrap {
+		padding: 0 40px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@include media("screen", "<=tablet"){
+			padding: 50px 30px 60px;
+			position: relative;
+			transform: none;
+		}
+	}
+	h2 {
+		color: #fff;
+	}
+
+	p {
+		color: $text-color-dark;
+		font-size: 20px;
+		margin: 30px 0 40px !important;
+	}
+
+	a {
+		&.button-secondary {
+			background-color: $secondary-color;
+			&:hover {
+				background-color: #fff;
+				color: $primary-color;
+			}
+		}
+	}
 }
 
 
@@ -31,7 +83,17 @@
 }
 
 .addons-home {
-    border-top: 3px solid #dbdbdb;
     margin-top: 30px;
     padding-top: 15px;
+}
+
+.addon-disclaimer {
+	border: 1px solid #ececec;
+	border-top: 3px solid #ff5545;
+	margin-bottom: 30px;
+	padding: 25px;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
 }

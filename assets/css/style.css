@@ -739,7 +739,7 @@ th {
 @media screen and (max-width: 1024px) {
   .page-title,
   .error404 .page-title {
-    padding: 100px 0 40px; }
+    padding: 120px 0 60px; }
   .page-title .archive-title,
   .page-title .entry-title {
     font-size: 36px; }
@@ -951,6 +951,58 @@ th {
     top: 46px;
     z-index: 499; } }
 
+/* Dark Header theme */
+.dark-header.nav-show .site-header {
+  background-color: #162938; }
+
+.dark-header .site-title a {
+  color: #fff; }
+  .dark-header .site-title a:hover {
+    color: #3daef1; }
+
+.dark-header #responsive-menu-icon::before {
+  color: #fff; }
+
+.dark-header .nav-primary a {
+  color: #fff; }
+  .dark-header .nav-primary a:hover {
+    color: #3daef1; }
+
+.dark-header .nav-primary .sub-menu a {
+  background-color: #fff;
+  color: #162938; }
+  .dark-header .nav-primary .sub-menu a:hover {
+    color: #3daef1; }
+
+@media screen and (max-width: 1024px) {
+  .dark-header .nav-primary .sub-menu a:hover {
+    background-color: #162938; } }
+
+@media screen and (max-width: 1024px) {
+  .dark-header .nav-primary .sub-menu a {
+    background-color: #162938;
+    color: #fff; } }
+
+.dark-header .nav-primary .sub-menu:before {
+  border-color: #fff transparent; }
+
+.dark-header .nav-primary .get-blox a {
+  background-color: #3daef1; }
+  .dark-header .nav-primary .get-blox a:hover {
+    color: #162938;
+    background-color: #fff; }
+
+.dark-header .page-title {
+  background-color: #162938; }
+  .dark-header .page-title h1 {
+    color: #fff; }
+
+.dark-header .entry-subtitle {
+  color: #6d8798; }
+
+.dark-header .content {
+  padding-top: 80px; }
+
 /*--------------------------------------------------------------
 ## Content Styles
 --------------------------------------------------------------*/
@@ -965,6 +1017,9 @@ th {
   max-width: 800px;
   padding: 0;
   width: 100%; }
+
+.full-width-content-extended .content {
+  max-width: 1000px; }
 
 .sidebar {
   float: right;
@@ -987,7 +1042,7 @@ th {
   .content,
   .sidebar {
     width: 100%;
-    padding: 60px 5%; } }
+    padding: 0 5% 60px; } }
 
 .entry-content p:last-child {
   margin: 0; }
@@ -1290,8 +1345,7 @@ p.entry-meta {
 /* Account
 --------------------------------------------- */
 .blox-account .content {
-  padding-top: 40px;
-  max-width: 1000px; }
+  padding-top: 40px; }
 
 .account-menu {
   border-bottom: 1px solid #ececec;
@@ -1826,24 +1880,61 @@ p.entry-meta {
     padding: 30px; } }
 
 .blox-addons .site-inner {
-  background-color: #f1f1f1; }
+  background-color: #f0f8ff;
+  padding: 100px 0 60px; }
+
+@media screen and (max-width: 782px) {
+  .blox-addons .site-inner {
+    padding-bottom: 0; } }
+
+.blox-addons .content {
+  max-width: 1000px; }
 
 .addon-list .item {
-  background-color: #fff;
-  margin-bottom: 80px;
-  padding: 50px 50px 40px;
-  border-bottom: 3px solid #dbdbdb; }
+  background-color: #fff; }
+  .addon-list .item p {
+    margin-bottom: 20px; }
+
+@media screen and (max-width: 782px) {
+  .addon-list .item {
+    margin-bottom: 40px; } }
 
 .addon-list a.entry-image {
   line-height: 0;
-  margin: -50px -50px 10px;
   display: block; }
 
-.addon-list .item p {
-  margin-bottom: 20px; }
+.addon-list .entry-header {
+  padding: 40px 30px 0; }
 
-.blox-addons .content .wp-post-image {
-  margin-bottom: 30px; }
+.addon-list .entry-content {
+  padding: 0 30px 40px; }
+
+.addon-idea {
+  background-color: #162938 !important;
+  position: relative;
+  text-align: center; }
+  .addon-idea .addon-idea-wrap {
+    padding: 0 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+
+@media screen and (max-width: 782px) {
+  .addon-idea .addon-idea-wrap {
+    padding: 50px 30px 60px;
+    position: relative;
+    transform: none; } }
+  .addon-idea h2 {
+    color: #fff; }
+  .addon-idea p {
+    color: #6d8798;
+    font-size: 20px;
+    margin: 30px 0 40px !important; }
+  .addon-idea a.button-secondary {
+    background-color: #3daef1; }
+    .addon-idea a.button-secondary:hover {
+      background-color: #fff;
+      color: #162938; }
 
 /* Addon Single
 --------------------------------------------- */
@@ -1851,9 +1942,16 @@ p.entry-meta {
   margin-bottom: 10px; }
 
 .addons-home {
-  border-top: 3px solid #dbdbdb;
   margin-top: 30px;
   padding-top: 15px; }
+
+.addon-disclaimer {
+  border: 1px solid #ececec;
+  border-top: 3px solid #ff5545;
+  margin-bottom: 30px;
+  padding: 25px; }
+  .addon-disclaimer p:last-child {
+    margin-bottom: 0; }
 
 .blog .content {
   max-width: 1000px; }
@@ -1974,48 +2072,6 @@ p.entry-meta {
     margin-bottom: 40px; }
   .single-post article .wp-post-image {
     display: none; } }
-
-.blox-pricing .site-title a {
-  color: #fff; }
-  .blox-pricing .site-title a:hover {
-    color: #162938; }
-
-.blox-pricing .nav-primary a {
-  color: #fff; }
-  .blox-pricing .nav-primary a:hover {
-    color: #162938; }
-
-.blox-pricing .nav-primary .sub-menu a {
-  color: #fff; }
-  .blox-pricing .nav-primary .sub-menu a:hover {
-    color: #3daef1; }
-
-.blox-pricing .nav-primary .get-blox a {
-  background-color: #3daef1; }
-  .blox-pricing .nav-primary .get-blox a:hover {
-    color: #162938;
-    background-color: #fff; }
-
-.blox-pricing .page-title {
-  background-color: #162938; }
-  .blox-pricing .page-title h1 {
-    color: #fff; }
-
-.blox-pricing .content {
-  max-width: 1000px;
-  padding-top: 80px; }
-
-.blox-pricing-table {
-  background-color: #162938;
-  padding-bottom: 80px; }
-  .blox-pricing-table .pricing-table {
-    margin: 0 auto;
-    max-width: 1000px; }
-  .blox-pricing-table .pricing-subtext {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 30px 0;
-    text-align: center; }
 
 /*--------------------------------------------------------------
 ## Avatar
@@ -2168,30 +2224,129 @@ p.entry-meta {
   .pricing-table .one-third:nth-child(2) {
     margin: 50px 0; } }
 
-.questions h5 {
-  margin-bottom: 10px; }
+.blox-pricing-table {
+  background-color: #162938;
+  padding-bottom: 80px; }
 
-.questions .one-half {
-  padding: 0 30px; }
+@media screen and (max-width: 782px) {
+  .blox-pricing-table {
+    padding: 10px 5% 60px; } }
+  .blox-pricing-table .pricing-table {
+    margin: 0 auto;
+    max-width: 1000px; }
+  .blox-pricing-table .pricing-subtext {
+    color: #6d8798;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 0;
+    text-align: center; }
 
-.questions .one-half p:last-child {
-  margin-bottom: 10px; }
+.questions {
+  margin-bottom: 60px; }
+  .questions h4 {
+    margin: 60px 0 15px; }
+  .questions p {
+    margin-bottom: 0; }
+  .questions .one-half {
+    padding: 0 30px; }
 
 .questions-title {
-  margin: 20px 0 60px; }
-
-.questions-title h2 {
-  font-size: 36px;
-  margin-bottom: 5px; }
-
-.questions-title p {
-  font-size: 20px; }
+  margin: 100px 0 30px; }
+  .questions-title h2 {
+    font-size: 36px;
+    margin-bottom: 5px; }
+  .questions-title p {
+    font-size: 20px; }
 
 @media screen and (max-width: 782px) {
   .questions .one-half {
-    padding: 0; }
-  .questions .one-half.first p:last-child {
-    margin-bottom: 28px; } }
+    padding: 0; } }
+
+.blox-features {
+  background-color: #f0f8ff;
+  padding: 80px 0;
+  margin-bottom: 70px; }
+  .blox-features .blox-wrap {
+    max-width: 1000px;
+    margin: 0 auto; }
+
+@media screen and (max-width: 1024px) {
+  .blox-features .blox-wrap {
+    padding: 0 5%; } }
+  .blox-features .feature {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 60px; }
+    .blox-features .feature .feature-image {
+      width: 35%;
+      padding-bottom: 35%;
+      border: 1px solid #ececec;
+      float: right;
+      border-radius: 100%;
+      overflow: hidden;
+      position: relative; }
+      .blox-features .feature .feature-image a {
+        position: absolute; }
+      .blox-features .feature .feature-image img {
+        margin-bottom: 0;
+        max-width: 160%; }
+
+@media screen and (max-width: 782px) {
+  .blox-features .feature .feature-image {
+    width: 50%;
+    padding-bottom: 50%;
+    float: none;
+    margin: 0 auto 40px; } }
+
+@media screen and (max-width: 480px) {
+  .blox-features .feature .feature-image {
+    width: 80%;
+    padding-bottom: 80%; } }
+    .blox-features .feature .feature-content {
+      width: 65%;
+      float: left;
+      padding: 60px 100px 60px 40px; }
+
+@media screen and (max-width: 1024px) {
+  .blox-features .feature .feature-content {
+    padding: 20px 80px 60px 0; } }
+
+@media screen and (max-width: 782px) {
+  .blox-features .feature .feature-content {
+    float: none;
+    padding: 0;
+    width: 100%; } }
+    .blox-features .feature:nth-child(even) .feature-image {
+      float: left; }
+
+@media screen and (max-width: 782px) {
+  .blox-features .feature:nth-child(even) .feature-image {
+    width: 50%;
+    padding-bottom: 50%;
+    float: none;
+    margin: 0 auto 40px; } }
+
+@media screen and (max-width: 480px) {
+  .blox-features .feature:nth-child(even) .feature-image {
+    width: 80%;
+    padding-bottom: 80%; } }
+    .blox-features .feature:nth-child(even) .feature-content {
+      float: right;
+      padding: 60px 40px 60px 100px; }
+
+@media screen and (max-width: 1024px) {
+  .blox-features .feature:nth-child(even) .feature-content {
+    padding: 20px 0 60px 80px; } }
+
+@media screen and (max-width: 782px) {
+  .blox-features .feature:nth-child(even) .feature-content {
+    float: none;
+    padding: 0;
+    width: 100%; } }
+    .blox-features .feature:last-child {
+      margin-bottom: 0px; }
+  .blox-features:after {
+    color: #556977 !important; }
 
 .features-container {
   overflow: hidden; }
@@ -2276,7 +2431,8 @@ p.entry-meta {
   height: 0;
   width: 20px;
   display: inline-block;
-  margin-right: 20px; }
+  margin-right: 20px;
+  line-height: 1.1; }
 
 .features .one-half {
   padding: 0 30px 15px; }
@@ -2320,9 +2476,6 @@ Flex Box
   justify-content: space-between;
   align-content: flex-start; }
 
-.grid .entry-title {
-  font-size: 24px; }
-
 .grid.columns .item {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -2333,7 +2486,7 @@ Flex Box
   flex-flow: column; }
 
 .grid.columns-2 .item {
-  width: 46%; }
+  width: 47%; }
 
 .grid.columns-3 .item {
   width: 31%; }

@@ -3,110 +3,133 @@
 	line-height: 1;
 	text-align: center;
 
-  .one-third {
-  	background-color: #fff;
-  	border: 2px solid $primary-color;
-  	margin: 0 -2px;
-  	padding: 40px;
+	.one-third {
+		background-color: #fff;
+		border: 2px solid $primary-color;
+		margin: 0 -2px;
+		padding: 40px;
 
-    &:nth-child(2) {
-      .price-heading {
-        background-color: $secondary-color;
-        color: #ffffff;
+		&:nth-child(2) {
+			.price-heading {
+				background-color: $secondary-color;
+				color: #ffffff;
 
 				h4 {
 					color: #ffffff;
 				}
-      }
-    }
+			}
+		}
 
-    &:nth-child(3n+1) {
-      clear: both;
-      margin: 20px 0 20px 2.564102564102564%;
-    }
-    &:nth-child(3n+3) {
-	    margin: 20px 2.564102564102564% 20px 0;
-    }
-  }
+		&:nth-child(3n+1) {
+		  	clear: both;
+		  	margin: 20px 0 20px 2.564102564102564%;
+		}
+		&:nth-child(3n+3) {
+		    margin: 20px 2.564102564102564% 20px 0;
+		}
+	}
 
-  .price-heading {
-    background-color: $background-color;
-  	border-bottom: 2px solid $primary-color;
-  	margin: -40px -40px 40px;
-  	padding: 40px;
-  }
+	.price-heading {
+		background-color: $background-color;
+		border-bottom: 2px solid $primary-color;
+		margin: -40px -40px 40px;
+		padding: 40px;
+	}
 
-  .price-title {
-  	font-weight: 300;
-  	letter-spacing: 2px;
-  	text-transform: uppercase;
-  }
+	.price-title {
+		font-weight: 300;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
 
-  .price {
-  	text-transform: uppercase;
-  }
+	.price {
+		text-transform: uppercase;
+	}
 
-  .amt {
-  	font-size: 80px;
-  	line-height: 0.8;
-  }
+	.amt {
+		font-size: 80px;
+		line-height: 0.8;
+	}
 
-  .sup {
-  	vertical-align: top;
-  	font-weight: 700;
-  }
+	.sup {
+		vertical-align: top;
+		font-weight: 700;
+	}
 
-  .sub {
-  	vertical-align: bottom;
-  	letter-spacing: 2px;
-  	font-weight: 700;
-  }
+	.sub {
+		vertical-align: bottom;
+		letter-spacing: 2px;
+		font-weight: 700;
+	}
 
-  ul {
-		color: $text-color;
-    margin-bottom: 30px !important;
-    margin-left: 0 !important;
-  }
+	ul {
+	  	color: $text-color;
+		margin-bottom: 30px !important;
+		margin-left: 0 !important;
+	}
 
-  li {
-  	border-bottom: 1px solid #ececec;
-  	margin-bottom: 10px;
-  	padding-bottom: 10px;
-    list-style-type: none !important;
+	li {
+		border-bottom: 1px solid #ececec;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+		list-style-type: none !important;
 
-    &::before {
-      color: $accent-color-green;
-      content: '\2713';
-      display: inline-block;
-      font-family: "icon-font";
-      font-style: normal;
-      font-variant: normal;
-      font-weight: normal;
-      line-height: 1em;
-      margin-left: .2em;
-      margin-right: .2em;
-      speak: none;
-      text-align: center;
-      text-decoration: inherit;
-      text-transform: none;
-      width: 1em;
-    }
+		&::before {
+			color: $accent-color-green;
+			content: '\2713';
+			display: inline-block;
+			font-family: "icon-font";
+			font-style: normal;
+			font-variant: normal;
+			font-weight: normal;
+			line-height: 1em;
+			margin-left: .2em;
+			margin-right: .2em;
+			speak: none;
+			text-align: center;
+			text-decoration: inherit;
+			text-transform: none;
+			width: 1em;
+		}
 
-    &.not-included::before {
-      content: '\2715';
-      color: $accent-color-red;
-    }
-  }
+		&.not-included::before {
+			content: '\2715';
+			color: $accent-color-red;
+		}
+	}
 }
 
 @include media("screen", "<=tablet") {
-  .pricing-table .one-third,
-  .pricing-table .one-third:nth-child(3n+1),
-  .pricing-table .one-third:nth-child(3n+3) {
-    margin: 0;
+	.pricing-table .one-third,
+	.pricing-table .one-third:nth-child(3n+1),
+	.pricing-table .one-third:nth-child(3n+3) {
+		margin: 0;
+	}
+
+	.pricing-table .one-third:nth-child(2){
+		margin: 50px 0;
+	}
+}
+
+
+// Blox version of the pricing table
+.blox-pricing-table {
+  background-color: $primary-color;
+  padding-bottom: 80px;
+
+  @include media("screen", "<=tablet"){
+      padding: 10px 5% 60px;
   }
 
-  .pricing-table .one-third:nth-child(2){
-    margin: 50px 0;
+  .pricing-table {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .pricing-subtext {
+      color: $text-color-dark;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 0;
+    text-align: center;
   }
 }

@@ -46,9 +46,9 @@
 }
 
 @include media("screen","<=desktop"){
-  .page-title,
+  	.page-title,
 	.error404 .page-title {
-		padding: 100px 0 40px;
+		padding: 120px 0 60px;
 	}
 
 	.page-title .archive-title,

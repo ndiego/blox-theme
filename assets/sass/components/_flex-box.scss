@@ -13,10 +13,6 @@ Flex Box
     align-content: flex-start;
 }
 
-.grid .entry-title {
-	font-size: 24px;
-}
-
 .grid.columns .item {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -28,7 +24,7 @@ Flex Box
 }
 
 .grid.columns-2 .item {
-    width: 46%;
+    width: 47%;
 }
 
 .grid.columns-3 .item {

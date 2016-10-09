@@ -109,7 +109,7 @@
     }
 
     &:before {
-      border-color: #162938 transparent;
+      border-color: $primary-color transparent;
       border-width: 0 10px 10px;
       border-style: solid;
       content: "";
@@ -140,7 +140,7 @@
         color: $primary-color;
         font-family: $font-medium;
         font-size: 18px;
-				padding: 0;
+		padding: 0;
         position: relative;
         width: 100%;
       }

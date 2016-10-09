@@ -12,6 +12,10 @@
     width: 100%;
 }
 
+.full-width-content-extended .content {
+    max-width: 1000px;
+}
+
 .sidebar {
 	float: right;
 	font-size: 16px;
@@ -46,7 +50,7 @@
   	.content,
   	.sidebar {
   		width: 100%;
-  		padding: 60px 5%;
+  		padding: 0 5% 60px;
   	}
 }
 
