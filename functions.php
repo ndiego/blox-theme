@@ -367,6 +367,19 @@ function blox_redirect_members_to_login() {
   }
 }
 
+
+// Filter the from email for all system emails
+add_filter( 'wp_mail_from', 'blox_filter_wp_mail_from' );
+function blox_filter_wp_mail_from( $email ){
+	return "support@bloxwp.com";
+}
+// Filter the from name for all system emails
+add_filter( 'wp_mail_from_name', 'blox_filter_wp_mail_from_name' );
+function blox_filter_wp_mail_from_name( $from_name ){
+	return "Blox Support";
+}
+
+
 function blox_main_styles() {
 	if ( SCRIPT_DEBUG || WP_DEBUG ) {
 		wp_register_style(

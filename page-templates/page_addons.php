@@ -24,9 +24,6 @@ add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
 // Remove breadcrumbs
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
-// Remove navigation
-remove_action( 'genesis_after_header', 'genesis_do_nav' );
-
 // Remove the main content of the page, we will add our own
 remove_action( 'genesis_entry_content', 'genesis_do_post_content' );
 

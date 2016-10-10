@@ -9,6 +9,27 @@
 }
 
 /* Cart */
+.blox-checkout {
+	.site-header {
+		position: relative;
+		padding: 100px 0 60px;
+		text-align: center;
+	}
+	.title-area {
+		float: none;
+		width: 100%;
+		.site-title {
+			font-size: 60px;
+		}
+	}
+
+
+	.content {
+		max-width: 700px;
+	}
+}
+
+
 #edd_your_order {
 	margin-bottom: 30px;
 }
@@ -21,8 +42,7 @@
 	border: 1px solid #dbdbdb;
 }
 .edd_cart_header_row th {
-	font-weight: 400;
-    background-color: #f1f1f1;
+	font-family: $font-medium;
 }
 .edd_cart_item_price {
 	text-align: right;
@@ -33,13 +53,11 @@
     position: relative;
 }
 .edd_cart_footer_row th {
-	font-weight: 400;
 	text-align: right;
 }
 .edd_cart_discount_row th {
     background-color: #fff;
     font-style: italic;
-    font-weight: 300;
 }
 .edd_discount_remove {
   top: 8px;
@@ -51,7 +69,6 @@
   line-height: 1;
   font-family: dashicons;
   text-decoration: inherit;
-  font-weight: 400;
   font-style: normal;
   vertical-align: top;
   text-align: center;
@@ -80,7 +97,6 @@
 }
 #edd_purchase_form label {
     display: block;
-    font-weight: 400;
     margin-bottom: 10px;
     font-family: 'AvenirLTStd-Heavy', sans-serif;
     font-size: 17px;
@@ -101,23 +117,6 @@
 	text-align: center;
 }
 
-#edd_payment_mode_select,
-#edd_checkout_user_info {
-	width: 46%;
-    float: left;
-}
-.edd-payment-icons,
-#edd_register_account_fields {
-	width: 46%;
-    float: right;
-}
-
-#edd_login_fields p:nth-child(n+2),
-#edd_login_fields .edd_errors {
-	width: 46%;
-    float: left;
-    clear: both;
-}
 #edd-discount-error-wrap,
 #edd_purchase_form .edd_errors {
 	background-color: #FF4D4D;
@@ -141,12 +140,12 @@
 }
 
 .edd-payment-mode-label {
+	color: $primary-color;
 	display: inline-block;
-  font-family: 'Monsterrat', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 1.2;
-  margin: 0 0 12px;
+    font-family: "AvenirLTStd-Heavy", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 0 0 12px;
 }
 
 
@@ -155,14 +154,20 @@
 }
 
 .edd-payment-icons {
-	position: relative;
-	text-align: right;
-	top: -10px;
+	margin-bottom: 20px;
+	img {
+		margin-right: 5px;
+	}
 }
 .edd-gateway {
 	margin-right: 8px;
 }
 
+#edd_final_total_wrap {
+	font-size: 22px;
+	text-align: center;
+	padding: 30px 0;
+}
 
 #edd_purchase_submit {
 	margin-top: 20px !important;
@@ -171,6 +176,11 @@
 
 #edd_purchase_form_wrap {
 	clear: both;
+	input[type="submit"] {
+		width: 100%;
+		font-size: 22px;
+		padding: 20px 0;
+	}
 }
 
 .blox-cart-description {
