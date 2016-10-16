@@ -14,6 +14,10 @@
 
   .wrap {
   	margin: 80px auto;
+
+	@include media("screen", "<=desktop") {
+	  margin: 0 auto 60px;
+	}
   }
 
   .widget-title {

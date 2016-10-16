@@ -205,7 +205,7 @@
 
 .home-widgets-1 {
 	width: 100%;
-	padding: 200px 0 160px;
+	padding: 180px 0 130px;
 
 	@include media("screen", "<=tablet") {
 		padding: 140px 0 80px;
@@ -251,7 +251,7 @@
 
 .home-widgets-2 {
 	background-color: $background-color;
-	padding: 140px 0;
+	padding: 100px 0 120px;
 	text-align: center;
 
 	@include media("screen", "<=tablet") {
@@ -339,7 +339,7 @@
 
 
 .home-widgets-4 {
-	padding: 120px 0;
+	padding: 100px 0 120px;
 
 	@include media("screen", "<=tablet") {
 		padding: 80px 0 100px;
@@ -410,9 +410,6 @@
 
 
 @include media("screen", "<=desktop") {
-
-
-
 
 	.home-widgets-3 {
     .text,

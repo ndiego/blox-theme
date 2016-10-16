@@ -61,7 +61,7 @@ function blox_do_addons() {
                 </header>
                 <div class="entry-content">
                     <p><?php echo get_the_excerpt( $addon->ID ); ?></p>
-                    <a class="readmore button" href="<?php the_permalink( $addon->ID ); ?>" title="<?php the_title(); ?>"><?php _e( 'Learn More', 'blox-theme' ); ?></a>
+                    <a class="readmore button button-secondary" href="<?php the_permalink( $addon->ID ); ?>" title="<?php the_title(); ?>"><?php _e( 'Learn More', 'blox-theme' ); ?></a>
                 </div>
 		 	</div>
 		<?php }

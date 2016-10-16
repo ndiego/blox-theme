@@ -16,8 +16,17 @@
 .addon-list {
 	.item {
 		background-color: #fff;
+		margin-bottom: 60px;
 		p {
 			margin-bottom: 20px;
+		}
+
+		&:nth-last-of-type(-n+2) {
+    		margin-bottom: 0;
+
+			@include media("screen", "<=tablet"){
+				margin-bottom: 40px;
+			}
 		}
 
 		@include media("screen", "<=tablet"){

@@ -263,7 +263,17 @@ function blox_set_search_excerpt_more() {
 // Modify the WordPress read more link
 add_filter( 'get_the_content_more_link', 'blox_read_more_link' );
 function blox_read_more_link() {
-	return '... <div><a class="button button-secondary" href="' . get_permalink() . '">Continue Reading</a></div>';
+	return ' [...] <div><a class="button button-secondary" href="' . get_permalink() . '">Continue Reading</a></div>';
+}
+
+add_filter( 'get_the_excerpt', 'blox_manual_excerpt_more' );
+// Add a readmore button to posts with manual excerpts
+function blox_manual_excerpt_more( $excerpt ) {
+	$excerpt_more = '';
+	if( has_excerpt() ) {
+    	$excerpt_more = ' [...] <div><a class="button button-secondary" href="' . get_permalink() . '">Continue Reading</a></div>';
+	}
+	return $excerpt . $excerpt_more;
 }
 
 // Modify the size of the Gravatar in author box
