@@ -56,7 +56,7 @@ function blox_print_addon_info() {
 				<p><a href="<?php echo $documentation; ?>" title="<?php _e( 'View Documentation', 'blox-theme' ); ?>"><?php _e( 'View Documentation', 'blox-theme' ); ?></a></p>
 			</div>
 			<div class="addons-home">
-				<a href="/addons" class="button button-secondary"><?php _e( 'All Add-ons', 'blox-theme' ); ?></a>
+				<a href="/add-ons" class="button button-secondary"><?php _e( 'All Add-ons', 'blox-theme' ); ?></a>
 			</div>
 		</div>
 

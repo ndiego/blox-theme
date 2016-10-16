@@ -9,7 +9,7 @@
 	GitHub Theme URI: https://github.com/ndiego/blox-theme
 	GitHub Branch:    master
 
-	Version: 1.0.1
+	Version: 1.1.0
 
 	Template: genesis
 	Template Version: 2.4
@@ -1511,6 +1511,13 @@ p.entry-meta {
   .archive.post-type-archive-documentation .site-inner .content {
     max-width: 1000px; }
 
+.documentation-home a {
+  width: 100%; }
+
+@media screen and (max-width: 782px) {
+  .documentation-home a {
+    width: auto; } }
+
 @media (min-width: 782px) {
   .documentation-body ul {
     -moz-column-count: 2;
@@ -1961,6 +1968,12 @@ p.entry-meta {
 .addons-home {
   margin-top: 30px;
   padding-top: 15px; }
+  .addons-home a {
+    width: 100%; }
+
+@media screen and (max-width: 782px) {
+  .addons-home a {
+    width: auto; } }
 
 .addon-disclaimer {
   border: 1px solid #ececec;

@@ -161,7 +161,14 @@
  }
 }
 
-
+.documentation-home {
+    a {
+        width: 100%;
+        @include media("screen", "<=tablet"){
+            width: auto;
+        }
+    }
+}
 
 
 @media ( min-width: 782px ) {
