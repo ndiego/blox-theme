@@ -1,6 +1,7 @@
 .pagination {
 	margin: 0 auto;
 	text-align: center;
+	width: 100%;
 }
 
 .adjacent-entry-pagination {
@@ -23,7 +24,8 @@
 	}
 }
 
-.archive-pagination li.pagination-next {
+.archive-pagination li.pagination-next,
+.archive-pagination li.pagination-previous, {
 	a {
 		width: auto;
 		padding: 8px 20px;

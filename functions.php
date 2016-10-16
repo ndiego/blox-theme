@@ -89,37 +89,37 @@ function blox_page_modifications() {
 		add_action( 'genesis_after_header', 'blox_do_page_title', 2 );
 		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
 	} elseif ( is_singular( 'post' ) ) {
-  	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
-  	remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
-    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-    add_action( 'genesis_after_header', 'blox_do_post_title', 2 );
-    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-    add_action( 'genesis_entry_header', 'blox_do_post_thumbnail' );
-  } elseif ( is_singular( 'download' ) ) {
-	  remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+  		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+  		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+    	add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    	add_action( 'genesis_after_header', 'blox_do_post_title', 2 );
+    	add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+    	add_action( 'genesis_entry_header', 'blox_do_post_thumbnail' );
+  	} elseif ( is_singular( 'download' ) ) {
+	  	remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
 		remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
 		add_action( 'genesis_after_header', 'blox_open_post_title', 1 );
 		add_action( 'genesis_after_header', 'blox_do_page_title', 2 );
 		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-  } elseif ( is_author() ) {
-    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-    add_action( 'genesis_after_header', 'blox_do_author_title', 2 );
-    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+  	} elseif ( is_author() ) {
+    	add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    	add_action( 'genesis_after_header', 'blox_do_author_title', 2 );
+    	add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
 	} elseif ( is_category() || is_archive() ) {
 		remove_action( 'genesis_before_loop', 'genesis_do_taxonomy_title_description', 15 );
 		add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
 		add_action( 'genesis_after_header', 'genesis_do_taxonomy_title_description', 2 );
 		add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
 	} elseif ( is_search() ) {
-    remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
-    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-    add_action( 'genesis_after_header', 'genesis_do_search_title', 2 );
-    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-  } elseif ( is_home() && ! is_front_page() ) {
-    add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
-    add_action( 'genesis_after_header', 'blox_do_blog_title', 2 );
-    add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
-  }
+    	remove_action( 'genesis_before_loop', 'genesis_do_search_title' );
+    	add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    	add_action( 'genesis_after_header', 'genesis_do_search_title', 2 );
+    	add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+  	} elseif ( is_home() && ! is_front_page() ) {
+    	add_action( 'genesis_after_header', 'blox_open_post_title', 1 ) ;
+    	add_action( 'genesis_after_header', 'blox_do_blog_title', 2 );
+    	add_action( 'genesis_after_header', 'blox_close_post_title', 3 );
+  	}
 }
 
 // Remove default post meta from footer
@@ -253,7 +253,7 @@ function blox_set_search_excerpt_length( $length ) {
 
 add_filter( 'excerpt_more', 'blox_set_excerpt_more' );
 function blox_set_excerpt_more() {
-		return ' [...] <div><a class="button" href="' . get_permalink() . '">' . __( 'Continue Reading', 'blox-theme' ) . '</a></div>';
+		return ' [...] <div><a class="button button-secondary" href="' . get_permalink() . '">' . __( 'Continue Reading', 'blox-theme' ) . '</a></div>';
 }
 // Custom excerpt more link for ajax search results
 function blox_set_search_excerpt_more() {
@@ -263,7 +263,7 @@ function blox_set_search_excerpt_more() {
 // Modify the WordPress read more link
 add_filter( 'get_the_content_more_link', 'blox_read_more_link' );
 function blox_read_more_link() {
-	return '... <div><a class="button" href="' . get_permalink() . '">Continue Reading</a></div>';
+	return '... <div><a class="button button-secondary" href="' . get_permalink() . '">Continue Reading</a></div>';
 }
 
 // Modify the size of the Gravatar in author box
