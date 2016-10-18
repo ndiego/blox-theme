@@ -1,4 +1,11 @@
 <?php
+/* Add custom body class to the head
+add_filter( 'body_class', 'blox_add_body_class' );
+function blox_add_body_class( $classes ) {
+   $classes[] = 'dark-header';
+   return $classes;
+}*/
+
 // Force full width
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 

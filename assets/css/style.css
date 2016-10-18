@@ -2829,12 +2829,10 @@ Flex Box
   margin-top: 20px !important;
   width: 100%; }
 
-#edd_purchase_form_wrap {
-  clear: both; }
-  #edd_purchase_form_wrap input[type="submit"] {
-    width: 100%;
-    font-size: 22px;
-    padding: 20px 0; }
+#edd-purchase-button {
+  width: 100%;
+  font-size: 22px;
+  padding: 20px 0; }
 
 .blox-cart-description {
   font-size: 16px;

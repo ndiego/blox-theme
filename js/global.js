@@ -2,11 +2,11 @@ jQuery(function( $ ){
 
     $( 'header .nav-primary' ).addClass( 'responsive-menu' );
     $( 'header .nav-primary' ).before( '<div id="responsive-menu-icon"></div>' )
-    
+
     $( '#responsive-menu-icon' ).click(function(){
     	$( 'body' ).toggleClass( 'nav-show' );
     });
-    
+
 	$( '.nav-primary .menu-item-has-children' ).children( 'a' ).click( function(e) {
 		if ( $( 'body' ).hasClass( 'nav-show' ) ) {
 			e.preventDefault();
@@ -14,18 +14,19 @@ jQuery(function( $ ){
     		//$(this).unbind( 'click' );
     	}
     });
-    
+
     $(window).resize(function(){
     	if( window.innerWidth > 600 ) {
     		$( 'header .nav-primary' ).removeAttr( 'style' );
     	}
     });
-    
-    
+
+
     $(document).ready(function() {
   		$('.mfp-image').magnificPopup({type:'image'});
+        $('.mfp-iframe').magnificPopup({type:'iframe'});
 	});
-	
+
 });
 
 
