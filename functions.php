@@ -17,7 +17,7 @@ load_child_theme_textdomain( 'blox-theme', apply_filters( 'child_theme_textdomai
 // Child theme (do not remove)
 define( 'CHILD_THEME_NAME', __( 'Blox Theme', 'blox' ) );
 define( 'CHILD_THEME_URL', 'http://www.outermsostdesign.com' );
-define( 'CHILD_THEME_VERSION', '1.0.0' );
+define( 'CHILD_THEME_VERSION', '1.1.2' );
 
 
 
@@ -35,7 +35,7 @@ function blox_load_scripts() {
 
 	wp_enqueue_style( 'dashicons' );
 
-	wp_enqueue_script( 'global-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), '1.0.0', true );
+	wp_enqueue_script( 'global-js', get_bloginfo( 'stylesheet_directory' ) . '/js/global.js', array( 'jquery' ), CHILD_THEME_VERSION, true );
 }
 
 

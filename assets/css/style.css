@@ -9,7 +9,7 @@
 	GitHub Theme URI: https://github.com/ndiego/blox-theme
 	GitHub Branch:    master
 
-	Version: 1.1.1
+	Version: 1.1.2
 
 	Template: genesis
 	Template Version: 2.4
@@ -757,7 +757,8 @@ th {
 .site-header {
   padding: 20px 0 0;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 100; }
 
 .title-area {
   float: left;
